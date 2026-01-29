@@ -26,8 +26,28 @@ class TodoApp {
             btn.addEventListener('click', () => this.switchTab(btn.dataset.tab));
         });
 
+        // Event delegation for todo buttons
+        this.activeTodoList.addEventListener('click', (e) => this.handleTodoClick(e));
+        this.doneTodoList.addEventListener('click', (e) => this.handleTodoClick(e));
+
         // Initial render
         this.render();
+    }
+
+    handleTodoClick(e) {
+        const target = e.target;
+        if (!target.classList.contains('btn')) return;
+
+        const todoItem = target.closest('.todo-item');
+        if (!todoItem) return;
+
+        const todoId = parseInt(todoItem.dataset.id);
+        
+        if (target.classList.contains('done-btn') || target.classList.contains('undo-btn')) {
+            this.toggleDone(todoId);
+        } else if (target.classList.contains('delete-btn')) {
+            this.deleteTodo(todoId);
+        }
     }
 
     loadTodos() {
@@ -111,8 +131,8 @@ class TodoApp {
         this.activeTodoList.innerHTML = activeTodos.map(todo => `
             <li class="todo-item" data-id="${todo.id}">
                 <span class="todo-text">${this.escapeHtml(todo.text)}</span>
-                <button class="btn done-btn" onclick="app.toggleDone(${todo.id})">完了</button>
-                <button class="btn delete-btn" onclick="app.deleteTodo(${todo.id})">削除</button>
+                <button class="btn done-btn">完了</button>
+                <button class="btn delete-btn">削除</button>
             </li>
         `).join('');
     }
@@ -129,8 +149,8 @@ class TodoApp {
             <li class="todo-item done" data-id="${todo.id}">
                 <span class="todo-text">${this.escapeHtml(todo.text)}</span>
                 <span class="done-time">${todo.doneTime}</span>
-                <button class="btn undo-btn" onclick="app.toggleDone(${todo.id})">戻す</button>
-                <button class="btn delete-btn" onclick="app.deleteTodo(${todo.id})">削除</button>
+                <button class="btn undo-btn">戻す</button>
+                <button class="btn delete-btn">削除</button>
             </li>
         `).join('');
     }
@@ -143,4 +163,4 @@ class TodoApp {
 }
 
 // Initialize the app
-const app = new TodoApp();
+new TodoApp();
