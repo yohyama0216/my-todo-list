@@ -2,7 +2,6 @@
 class TodoApp {
     constructor() {
         this.todos = this.loadTodos();
-        this.currentTab = 'active';
         this.init();
     }
 
@@ -12,7 +11,6 @@ class TodoApp {
         this.addBtn = document.getElementById('addBtn');
         this.activeTodoList = document.getElementById('activeTodoList');
         this.doneTodoList = document.getElementById('doneTodoList');
-        this.tabBtns = document.querySelectorAll('.tab-btn');
 
         // Event listeners
         this.addBtn.addEventListener('click', () => this.addTodo());
@@ -20,10 +18,6 @@ class TodoApp {
             if (e.key === 'Enter') {
                 this.addTodo();
             }
-        });
-
-        this.tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => this.switchTab(btn.dataset.tab));
         });
 
         // Event delegation for todo buttons
@@ -38,7 +32,7 @@ class TodoApp {
         const target = e.target;
         if (!target.classList.contains('btn')) return;
 
-        const todoItem = target.closest('.todo-item');
+        const todoItem = target.closest('.list-group-item');
         if (!todoItem) return;
 
         const todoId = parseInt(todoItem.dataset.id);
@@ -95,26 +89,6 @@ class TodoApp {
         this.render();
     }
 
-    switchTab(tab) {
-        this.currentTab = tab;
-        
-        // Update tab buttons
-        this.tabBtns.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.tab === tab) {
-                btn.classList.add('active');
-            }
-        });
-
-        // Update tab panes
-        document.querySelectorAll('.tab-pane').forEach(pane => {
-            pane.classList.remove('active');
-            if (pane.id === tab) {
-                pane.classList.add('active');
-            }
-        });
-    }
-
     render() {
         this.renderActiveTodos();
         this.renderDoneTodos();
@@ -124,15 +98,17 @@ class TodoApp {
         const activeTodos = this.todos.filter(t => !t.done);
         
         if (activeTodos.length === 0) {
-            this.activeTodoList.innerHTML = '<li class="empty-message">アクティブなタスクはありません</li>';
+            this.activeTodoList.innerHTML = '<li class="list-group-item text-center text-muted">アクティブなタスクはありません</li>';
             return;
         }
 
         this.activeTodoList.innerHTML = activeTodos.map(todo => `
-            <li class="todo-item" data-id="${todo.id}">
-                <span class="todo-text">${this.escapeHtml(todo.text)}</span>
-                <button class="btn done-btn">完了</button>
-                <button class="btn delete-btn">削除</button>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-id="${todo.id}">
+                <span>${this.escapeHtml(todo.text)}</span>
+                <div>
+                    <button class="btn btn-success btn-sm done-btn">完了</button>
+                    <button class="btn btn-danger btn-sm delete-btn ms-1">削除</button>
+                </div>
             </li>
         `).join('');
     }
@@ -141,16 +117,20 @@ class TodoApp {
         const doneTodos = this.todos.filter(t => t.done);
         
         if (doneTodos.length === 0) {
-            this.doneTodoList.innerHTML = '<li class="empty-message">完了したタスクはありません</li>';
+            this.doneTodoList.innerHTML = '<li class="list-group-item text-center text-muted">完了したタスクはありません</li>';
             return;
         }
 
         this.doneTodoList.innerHTML = doneTodos.map(todo => `
-            <li class="todo-item done" data-id="${todo.id}">
-                <span class="todo-text">${this.escapeHtml(todo.text)}</span>
-                <span class="done-time">${todo.doneTime}</span>
-                <button class="btn undo-btn">戻す</button>
-                <button class="btn delete-btn">削除</button>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-id="${todo.id}">
+                <div>
+                    <span class="text-decoration-line-through">${this.escapeHtml(todo.text)}</span>
+                    <small class="text-muted d-block">${todo.doneTime}</small>
+                </div>
+                <div>
+                    <button class="btn btn-warning btn-sm undo-btn">戻す</button>
+                    <button class="btn btn-danger btn-sm delete-btn ms-1">削除</button>
+                </div>
             </li>
         `).join('');
     }

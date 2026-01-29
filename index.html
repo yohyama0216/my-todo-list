@@ -4,35 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1>Todo List</h1>
-        
-        <!-- Todo input -->
-        <div class="input-section">
-            <input type="text" id="todoInput" placeholder="新しいタスクを入力">
-            <button id="addBtn">追加</button>
-        </div>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mb-4">Todo List</h1>
+                        
+                        <!-- Todo input -->
+                        <div class="input-group mb-4">
+                            <input type="text" id="todoInput" class="form-control" placeholder="新しいタスクを入力">
+                            <button id="addBtn" class="btn btn-primary">追加</button>
+                        </div>
 
-        <!-- Tab navigation -->
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="active">アクティブ</button>
-            <button class="tab-btn" data-tab="done">完了済み</button>
-        </div>
+                        <!-- Tab navigation -->
+                        <ul class="nav nav-tabs mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active" type="button" role="tab">アクティブ</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="done-tab" data-bs-toggle="tab" data-bs-target="#done" type="button" role="tab">完了済み</button>
+                            </li>
+                        </ul>
 
-        <!-- Todo lists -->
-        <div class="tab-content">
-            <div id="active" class="tab-pane active">
-                <ul id="activeTodoList" class="todo-list"></ul>
-            </div>
-            <div id="done" class="tab-pane">
-                <ul id="doneTodoList" class="todo-list"></ul>
+                        <!-- Todo lists -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="active" role="tabpanel">
+                                <ul id="activeTodoList" class="list-group"></ul>
+                            </div>
+                            <div class="tab-pane fade" id="done" role="tabpanel">
+                                <ul id="doneTodoList" class="list-group"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
