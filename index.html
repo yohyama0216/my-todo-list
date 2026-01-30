@@ -14,27 +14,40 @@
                     <div class="card-body">
                         <h1 class="card-title text-center mb-4">Todo List</h1>
                         
-                        <!-- Todo input -->
-                        <div class="input-group mb-4">
-                            <input type="text" id="todoInput" class="form-control" placeholder="新しいタスクを入力">
-                            <button id="addBtn" class="btn btn-primary">追加</button>
-                        </div>
-
                         <!-- Tab navigation -->
                         <ul class="nav nav-tabs mb-3" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active" type="button" role="tab">アクティブ</button>
                             </li>
                             <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="routine-tab" data-bs-toggle="tab" data-bs-target="#routine" type="button" role="tab">ルーチン</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="done-tab" data-bs-toggle="tab" data-bs-target="#done" type="button" role="tab">完了済み</button>
                             </li>
                         </ul>
 
-                        <!-- Todo lists -->
+                        <!-- Tab content -->
                         <div class="tab-content">
+                            <!-- Active tab -->
                             <div class="tab-pane fade show active" id="active" role="tabpanel">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="todoInput" class="form-control" placeholder="新しいタスクを入力">
+                                    <button id="addBtn" class="btn btn-primary">追加</button>
+                                </div>
                                 <ul id="activeTodoList" class="list-group"></ul>
                             </div>
+                            
+                            <!-- Routine tab -->
+                            <div class="tab-pane fade" id="routine" role="tabpanel">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="routineInput" class="form-control" placeholder="新しいルーチンを入力">
+                                    <button id="addRoutineBtn" class="btn btn-primary">追加</button>
+                                </div>
+                                <ul id="routineList" class="list-group"></ul>
+                            </div>
+                            
+                            <!-- Done tab -->
                             <div class="tab-pane fade" id="done" role="tabpanel">
                                 <ul id="doneTodoList" class="list-group"></ul>
                             </div>
