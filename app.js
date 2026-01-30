@@ -3,8 +3,8 @@ class TodoApp {
     constructor() {
         this.todos = this.loadTodos();
         this.routines = this.loadRoutines();
-        this.checkAndResetRoutines();
         this.init();
+        this.checkAndResetRoutines();
     }
 
     init() {
@@ -40,8 +40,23 @@ class TodoApp {
         // Initial render
         this.render();
         
-        // Check for reset every minute
-        setInterval(() => this.checkAndResetRoutines(), 60000);
+        // Schedule next reset check
+        this.scheduleNextResetCheck();
+    }
+
+    scheduleNextResetCheck() {
+        const now = new Date();
+        const tomorrow = new Date(now);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setHours(1, 0, 0, 0);
+        
+        const msUntilReset = tomorrow.getTime() - now.getTime();
+        
+        // Schedule the reset
+        setTimeout(() => {
+            this.checkAndResetRoutines();
+            this.scheduleNextResetCheck(); // Schedule next day's reset
+        }, msUntilReset);
     }
 
     handleRoutineClick(e) {
@@ -104,16 +119,19 @@ class TodoApp {
         const now = new Date();
         const lastReset = this.getLastResetDate();
         
-        // Check if it's past 1:00 AM and we haven't reset today
-        if (now.getHours() >= 1) {
-            const today = now.toDateString();
-            if (lastReset !== today) {
-                // Reset all routine checkboxes
-                this.routines.forEach(routine => {
-                    routine.checked = false;
-                });
-                this.saveRoutines();
-                this.setLastResetDate(today);
+        // Get today's 1:00 AM
+        const todayReset = new Date(now);
+        todayReset.setHours(1, 0, 0, 0);
+        
+        // If we haven't reset yet and it's past 1:00 AM today
+        if (now >= todayReset && lastReset !== now.toDateString()) {
+            // Reset all routine checkboxes
+            this.routines.forEach(routine => {
+                routine.checked = false;
+            });
+            this.saveRoutines();
+            this.setLastResetDate(now.toDateString());
+            if (this.routineList) {
                 this.renderRoutines();
             }
         }
