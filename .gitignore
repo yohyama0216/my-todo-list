@@ -1,0 +1,10 @@
+# Test files
+test-local.html
+assets/
+
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
