@@ -1,0 +1,335 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+---
+
+<BaseLayout 
+  title="事例詳細 - フリーランスWeb制作"
+  description="プロジェクトの課題、実施した施策、達成した成果を詳しく紹介します。"
+>
+  <section class="page-header">
+    <div class="container">
+      <h1>事例紹介</h1>
+      <p class="lead">課題から成果まで、プロジェクトの詳細事例</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="case-studies">
+        <article class="case-study">
+          <h2>ECサイトのパフォーマンス改善</h2>
+          
+          <div class="case-section">
+            <h3>課題</h3>
+            <ul>
+              <li>ページ読込時間が3.5秒と遅く、モバイルでの離脱率が高い</li>
+              <li>商品画像の最適化が不十分</li>
+              <li>JavaScriptバンドルサイズが大きい</li>
+              <li>Core Web Vitalsで赤評価</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h3>実施した施策</h3>
+            <ul>
+              <li>画像の次世代フォーマット（WebP）への変換と遅延読込実装</li>
+              <li>Code Splittingによるバンドルサイズ削減</li>
+              <li>不要なサードパーティスクリプトの削除</li>
+              <li>CDN導入とキャッシュ戦略最適化</li>
+              <li>React 18のConcurrent Featuresを活用したUI最適化</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h3>成果</h3>
+            <div class="results">
+              <div class="result-item">
+                <div class="result-number">66%</div>
+                <div class="result-label">読込時間短縮<br />（3.5秒→1.2秒）</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">25%</div>
+                <div class="result-label">離脱率改善</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">18%</div>
+                <div class="result-label">CV率向上</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-section">
+            <h3>工数・期間</h3>
+            <p>約40時間 / 2週間</p>
+          </div>
+
+          <div class="case-section">
+            <h3>使用技術</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Webpack</span>
+              <span class="tech-tag">Cloudflare</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <h2>レガシーシステムのモダナイゼーション</h2>
+          
+          <div class="case-section">
+            <h3>課題</h3>
+            <ul>
+              <li>jQuery中心の10年前のコードベース</li>
+              <li>保守性が低く、バグ修正に時間がかかる</li>
+              <li>新機能追加が困難</li>
+              <li>テストコードが存在せず品質担保が難しい</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h3>実施した施策</h3>
+            <ul>
+              <li>段階的なReact移行計画の策定</li>
+              <li>共存可能なアーキテクチャ設計</li>
+              <li>TypeScript導入による型安全性向上</li>
+              <li>Jestによるテスト環境構築</li>
+              <li>CI/CD導入で自動テスト・デプロイ</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h3>成果</h3>
+            <div class="results">
+              <div class="result-item">
+                <div class="result-number">70%</div>
+                <div class="result-label">バグ発生率削減</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">50%</div>
+                <div class="result-label">開発速度向上</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">80%</div>
+                <div class="result-label">コードカバレッジ達成</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-section">
+            <h3>工数・期間</h3>
+            <p>約120時間 / 2ヶ月（段階的移行）</p>
+          </div>
+
+          <div class="case-section">
+            <h3>使用技術</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Jest</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">Webpack</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <h2>コーポレートサイトリニューアル</h2>
+          
+          <div class="case-section">
+            <h3>課題</h3>
+            <ul>
+              <li>デザインが古く、企業イメージに合わない</li>
+              <li>スマホ対応が不十分</li>
+              <li>SEO対策がされておらず検索順位が低い</li>
+              <li>問い合わせフォームが使いにくい</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h3>実施した施策</h3>
+            <ul>
+              <li>Astroを使った高速な静的サイト構築</li>
+              <li>モバイルファーストのレスポンシブデザイン</li>
+              <li>構造化データとメタタグの最適化</li>
+              <li>ユーザビリティを考慮したフォーム設計</li>
+              <li>Core Web Vitals最適化</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h3>成果</h3>
+            <div class="results">
+              <div class="result-item">
+                <div class="result-number">100点</div>
+                <div class="result-label">Lighthouse<br />パフォーマンス</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">3倍</div>
+                <div class="result-label">問い合わせ数増加</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">グリーン</div>
+                <div class="result-label">Core Web Vitals<br />全項目</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-section">
+            <h3>工数・期間</h3>
+            <p>約60時間 / 3週間</p>
+          </div>
+
+          <div class="case-section">
+            <h3>使用技術</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Astro</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Formspree</span>
+              <span class="tech-tag">GitHub Pages</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>同じような課題をお持ちですか？</h2>
+      <p>まずは無料相談でお話を聞かせてください。最適なソリューションをご提案します。</p>
+      <CTAButton text="無料相談はこちら" href="/contact" variant="primary" size="large" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--bg-light);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+  }
+
+  .case-study {
+    background-color: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .case-study h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .case-section {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .case-section h3 {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .case-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .case-section li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .case-section li:before {
+    content: "●";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+  }
+
+  .result-item {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--bg-light);
+    border-radius: 0.5rem;
+  }
+
+  .result-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .result-label {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .tech-tag {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .cta-section h2 {
+    margin-bottom: var(--spacing-sm);
+    color: white;
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.95;
+  }
+
+  @media (max-width: 768px) {
+    .results {
+      grid-template-columns: 1fr;
+    }
+
+    .result-number {
+      font-size: 2rem;
+    }
+  }
+</style>

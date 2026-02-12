@@ -1,0 +1,377 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+---
+
+<BaseLayout 
+  title="料金 - フリーランスWeb制作"
+  description="Web制作・改修サービスの料金目安をご案内します。プロジェクトに応じて柔軟に対応可能です。"
+>
+  <section class="page-header">
+    <div class="container">
+      <h1>料金</h1>
+      <p class="lead">明確でわかりやすい料金体系</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="pricing-intro">
+        <p>
+          プロジェクトの規模や内容に応じて、柔軟に対応いたします。
+          以下は目安となる料金です。詳細はお見積もりでご提示いたします。
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>時給ベース</h3>
+          <div class="price">¥5,000〜8,000<span class="unit">/時間</span></div>
+          <ul class="pricing-features">
+            <li>小規模な改修や機能追加に最適</li>
+            <li>柔軟な対応が可能</li>
+            <li>作業時間に応じた明確な請求</li>
+          </ul>
+          <p class="pricing-note">※ 最低稼働時間：月10時間〜</p>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="featured-badge">おすすめ</div>
+          <h3>プロジェクトベース</h3>
+          <div class="price">¥200,000〜<span class="unit">/案件</span></div>
+          <ul class="pricing-features">
+            <li>新規サイト制作に最適</li>
+            <li>予算が明確で安心</li>
+            <li>要件定義から納品まで一貫対応</li>
+          </ul>
+          <p class="pricing-note">※ 内容により個別お見積もり</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>月額サポート</h3>
+          <div class="price">¥100,000〜<span class="unit">/月</span></div>
+          <ul class="pricing-features">
+            <li>継続的な改善・保守に最適</li>
+            <li>優先的な対応</li>
+            <li>定期的な改善提案</li>
+          </ul>
+          <p class="pricing-note">※ 稼働時間：月20時間程度</p>
+        </div>
+      </div>
+
+      <div class="pricing-examples">
+        <h2>料金例</h2>
+        <div class="example-grid">
+          <div class="example-item">
+            <h3>コーポレートサイト制作</h3>
+            <div class="example-details">
+              <div class="example-spec">
+                <strong>規模：</strong>5〜10ページ程度
+              </div>
+              <div class="example-spec">
+                <strong>期間：</strong>3〜4週間
+              </div>
+              <div class="example-price">¥300,000〜500,000</div>
+            </div>
+            <p class="example-includes">
+              企画・設計、デザイン実装、レスポンシブ対応、SEO対策、問い合わせフォーム設置を含む
+            </p>
+          </div>
+
+          <div class="example-item">
+            <h3>ランディングページ制作</h3>
+            <div class="example-details">
+              <div class="example-spec">
+                <strong>規模：</strong>1ページ
+              </div>
+              <div class="example-spec">
+                <strong>期間：</strong>1〜2週間
+              </div>
+              <div class="example-price">¥100,000〜200,000</div>
+            </div>
+            <p class="example-includes">
+              デザイン実装、アニメーション、フォーム設置、CV最適化を含む
+            </p>
+          </div>
+
+          <div class="example-item">
+            <h3>既存サイトのパフォーマンス改善</h3>
+            <div class="example-details">
+              <div class="example-spec">
+                <strong>規模：</strong>既存サイト
+              </div>
+              <div class="example-spec">
+                <strong>期間：</strong>2〜3週間
+              </div>
+              <div class="example-price">¥150,000〜300,000</div>
+            </div>
+            <p class="example-includes">
+              調査・分析、最適化実装、Core Web Vitals改善、レポート作成を含む
+            </p>
+          </div>
+
+          <div class="example-item">
+            <h3>WordPress既存サイト改修</h3>
+            <div class="example-details">
+              <div class="example-spec">
+                <strong>規模：</strong>機能追加・デザイン変更
+              </div>
+              <div class="example-spec">
+                <strong>期間：</strong>1〜2週間
+              </div>
+              <div class="example-price">¥100,000〜250,000</div>
+            </div>
+            <p class="example-includes">
+              要件ヒアリング、カスタマイズ実装、テスト、マニュアル作成を含む
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>よくある質問</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Q. 見積もりは無料ですか？</h3>
+            <p>はい、お見積もりは無料です。まずはお気軽にご相談ください。</p>
+          </div>
+          <div class="faq-item">
+            <h3>Q. 支払い方法は？</h3>
+            <p>銀行振込にて対応しております。プロジェクトベースの場合、着手金と納品後の分割払いも可能です。</p>
+          </div>
+          <div class="faq-item">
+            <h3>Q. 途中で仕様変更は可能ですか？</h3>
+            <p>可能です。ただし、工数が増える場合は追加費用が発生する場合があります。事前にご相談ください。</p>
+          </div>
+          <div class="faq-item">
+            <h3>Q. 予算が限られているのですが…</h3>
+            <p>ご予算に応じて、優先順位を決めて段階的に進めることも可能です。まずはご相談ください。</p>
+          </div>
+          <div class="faq-item">
+            <h3>Q. 納品後のサポートはありますか？</h3>
+            <p>納品後1ヶ月間は不具合対応を無償で行います。それ以降は月額サポートプランをご利用いただけます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>まずは無料でお見積もり</h2>
+      <p>プロジェクトの内容をお聞かせください。最適なプランをご提案します。</p>
+      <CTAButton text="無料相談・見積もり依頼" href="/contact" variant="primary" size="large" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--bg-light);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+  }
+
+  .pricing-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 1.125rem;
+    color: var(--text-gray);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .pricing-card {
+    background-color: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--primary-color);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  .pricing-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .unit {
+    font-size: 1rem;
+    color: var(--text-gray);
+    font-weight: normal;
+  }
+
+  .pricing-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .pricing-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .pricing-features li:before {
+    content: "✓";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  .pricing-note {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-bottom: 0;
+  }
+
+  .pricing-examples,
+  .faq-section {
+    margin-top: var(--spacing-xl);
+  }
+
+  .pricing-examples h2,
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .example-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .example-item {
+    background-color: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: 0.5rem;
+  }
+
+  .example-item h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+  }
+
+  .example-details {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .example-spec {
+    margin-bottom: 0.25rem;
+    color: var(--text-gray);
+  }
+
+  .example-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: var(--spacing-sm) 0;
+  }
+
+  .example-includes {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-bottom: 0;
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background-color: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .faq-item p {
+    margin-bottom: 0;
+    color: var(--text-dark);
+  }
+
+  .cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .cta-section h2 {
+    margin-bottom: var(--spacing-sm);
+    color: white;
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.95;
+  }
+
+  @media (max-width: 768px) {
+    .pricing-grid,
+    .example-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .price {
+      font-size: 2rem;
+    }
+  }
+</style>
