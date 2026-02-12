@@ -1,7 +1,7 @@
 {
-  "name": "my-todo-list",
+  "name": "freelance-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Professional freelance portfolio website built with Astro",
   "main": "app.js",
   "scripts": {
     "dev": "astro dev",

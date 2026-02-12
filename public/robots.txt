@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yohyama0216.github.io/my-todo-list/sitemap.xml
+# 重要: サイトマップのURLを実際のデプロイURLに置き換えてください
+Sitemap: https://yohyama0216.github.io/my-todo-list/sitemap-index.xml

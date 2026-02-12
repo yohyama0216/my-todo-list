@@ -49,6 +49,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="contact-form-wrapper">
+          <!-- 
+            重要: Formspreeの設定
+            1. https://formspree.io/ でアカウントを作成
+            2. 新しいフォームを作成してフォームIDを取得
+            3. 下記の YOUR_FORM_ID を実際のIDに置き換えてください
+            例: action="https://formspree.io/f/xwkgpzyz"
+          -->
           <form 
             id="contact-form" 
             action="https://formspree.io/f/YOUR_FORM_ID" 
