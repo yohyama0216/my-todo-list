@@ -1,0 +1,512 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+---
+
+<BaseLayout 
+  title="チラシ・ポスター制作 | デザインサービス"
+  description="店舗、イベント、広告向けのチラシ・ポスター制作。ターゲットに響くデザインで集客・認知度向上をサポート。納品形式・料金目安も明確。"
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">Design</div>
+      <h1 class="hero-title">チラシ・ポスター制作</h1>
+      <p class="hero-subtitle">
+        ターゲットに響くデザインで、集客・認知度向上をサポート
+      </p>
+    </div>
+  </section>
+
+  <!-- Service Overview -->
+  <section class="section service-overview">
+    <div class="container">
+      <h2 class="section-title">こんな方におすすめ</h2>
+      <div class="target-grid">
+        <div class="target-item">
+          <div class="target-icon">🏪</div>
+          <h3>店舗経営者</h3>
+          <p>新規オープン、セール告知、メニュー表など</p>
+        </div>
+        <div class="target-item">
+          <div class="target-icon">🎉</div>
+          <h3>イベント主催者</h3>
+          <p>音楽イベント、展示会、地域イベントの告知</p>
+        </div>
+        <div class="target-item">
+          <div class="target-icon">💼</div>
+          <h3>中小企業・個人事業主</h3>
+          <p>サービス紹介、採用案内、キャンペーン告知</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works Gallery -->
+  <section class="section works-gallery">
+    <div class="container">
+      <h2 class="section-title">制作実績</h2>
+      <div class="gallery-grid">
+        
+        <!-- Work 1 -->
+        <div class="work-item" id="work-cafe-flyer">
+          <div class="work-image">
+            <div class="placeholder-image">🎨</div>
+          </div>
+          <div class="work-content">
+            <h3>カフェオープンチラシ</h3>
+            <div class="work-meta">
+              <p><strong>目的:</strong> 新規カフェの認知度向上とオープン告知</p>
+              <p><strong>ターゲット:</strong> 20-40代女性、カフェ好き、地域住民</p>
+              <p><strong>工夫:</strong> 温かみのある配色とイラストで親しみやすさを演出。メニューの写真を大きく配置し、視覚的な訴求力を重視。</p>
+              <p><strong>成果:</strong> 配布後の来店率120%向上、SNS投稿50件以上</p>
+              <p><strong>納品形式:</strong> PDF（印刷用）、PNG（Web用）</p>
+            </div>
+            <div class="work-tags">
+              <span class="tag">チラシデザイン</span>
+              <span class="tag">Illustrator</span>
+              <span class="tag">カフェ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work 2 -->
+        <div class="work-item" id="work-music-poster">
+          <div class="work-image">
+            <div class="placeholder-image">🎸</div>
+          </div>
+          <div class="work-content">
+            <h3>音楽イベントポスター</h3>
+            <div class="work-meta">
+              <p><strong>目的:</strong> 地域音楽フェスティバルの集客</p>
+              <p><strong>ターゲット:</strong> 10-30代音楽ファン、地域住民</p>
+              <p><strong>工夫:</strong> 力強いタイポグラフィとダイナミックな構図で、エネルギッシュな雰囲気を表現。遠くからでも目を引くデザイン。</p>
+              <p><strong>成果:</strong> 前年比チケット売上150%、SNSシェア200件以上</p>
+              <p><strong>納品形式:</strong> AI、PDF（印刷用）、JPEG（Web/SNS用）</p>
+            </div>
+            <div class="work-tags">
+              <span class="tag">ポスターデザイン</span>
+              <span class="tag">Photoshop</span>
+              <span class="tag">イベント</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work 3 -->
+        <div class="work-item" id="work-real-estate-banner">
+          <div class="work-image">
+            <div class="placeholder-image">🏡</div>
+          </div>
+          <div class="work-content">
+            <h3>不動産会社の広告バナー</h3>
+            <div class="work-meta">
+              <p><strong>目的:</strong> Web広告のクリック率向上</p>
+              <p><strong>ターゲット:</strong> 30-50代、住宅購入検討者</p>
+              <p><strong>工夫:</strong> 信頼感のある配色と明瞭なキャッチコピー。複数サイズ（PC/SP）で最適化。A/Bテストで最良デザインを選定。</p>
+              <p><strong>成果:</strong> CTR2.5倍改善、問い合わせ数180%増加</p>
+              <p><strong>納品形式:</strong> PNG（各サイズ）、元データ（PSD）</p>
+            </div>
+            <div class="work-tags">
+              <span class="tag">バナーデザイン</span>
+              <span class="tag">Web広告</span>
+              <span class="tag">不動産</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Details -->
+  <section class="section pricing-details">
+    <div class="container">
+      <h2 class="section-title">料金・納期の目安</h2>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>チラシデザイン</h3>
+          <div class="price">¥15,000〜</div>
+          <ul class="pricing-features">
+            <li>A4サイズ片面・両面対応</li>
+            <li>修正2回まで無料</li>
+            <li>印刷用PDF + Web用PNG納品</li>
+          </ul>
+          <p class="pricing-time">納期: 1〜2週間</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>ポスターデザイン</h3>
+          <div class="price">¥20,000〜</div>
+          <ul class="pricing-features">
+            <li>A3/B2サイズ対応</li>
+            <li>修正2回まで無料</li>
+            <li>印刷用AI/PDF + Web用JPEG納品</li>
+          </ul>
+          <p class="pricing-time">納期: 2〜3週間</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>バナー・SNS画像</h3>
+          <div class="price">¥8,000〜</div>
+          <ul class="pricing-features">
+            <li>各種サイズ対応</li>
+            <li>修正1回まで無料</li>
+            <li>Web用PNG納品</li>
+          </ul>
+          <p class="pricing-time">納期: 3〜7日</p>
+        </div>
+      </div>
+
+      <div class="additional-info">
+        <h3>制作の流れ</h3>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="step-number">1</div>
+            <h4>ヒアリング</h4>
+            <p>目的、ターゲット、希望イメージ、納期などをお伺いします</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-number">2</div>
+            <h4>デザイン案提示</h4>
+            <p>ラフ案を2-3パターン提示し、方向性を決定します</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-number">3</div>
+            <h4>修正・調整</h4>
+            <p>フィードバックをもとに修正（2回まで無料）</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-number">4</div>
+            <h4>納品</h4>
+            <p>印刷用・Web用データを納品します</p>
+          </div>
+        </div>
+
+        <div class="notes">
+          <h4>注意事項</h4>
+          <ul>
+            <li>修正回数は2回まで無料。3回目以降は追加料金が発生します</li>
+            <li>印刷手配は別途ご相談ください（提携印刷会社のご紹介可能）</li>
+            <li>写真素材の手配が必要な場合、別途ストックフォト費用が発生する場合があります</li>
+            <li>納期は内容により変動します。お急ぎの場合はご相談ください</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>デザイン制作のご相談はこちら</h2>
+      <p>まずはお気軽にご相談ください。無料でお見積もりいたします。</p>
+      <CTAButton text="デザイン制作について相談する" href="/contact?service=design" variant="primary" size="large" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+  }
+
+  /* Target Audience */
+  .service-overview {
+    background-color: var(--bg-light);
+  }
+
+  .target-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .target-item {
+    background-color: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .target-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .target-item h3 {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .target-item p {
+    color: var(--text-gray);
+    margin-bottom: 0;
+  }
+
+  /* Works Gallery */
+  .gallery-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+  }
+
+  .work-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-md);
+    background-color: var(--bg-light);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .work-image {
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+
+  .placeholder-image {
+    font-size: 4rem;
+    opacity: 0.5;
+  }
+
+  .work-content {
+    padding: var(--spacing-md);
+  }
+
+  .work-content h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .work-meta {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .work-meta p {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  .work-meta strong {
+    color: var(--text-dark);
+  }
+
+  .work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #4c1d95;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  /* Pricing */
+  .pricing-details {
+    background-color: var(--bg-white);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .pricing-card {
+    background-color: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .pricing-card h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+  }
+
+  .pricing-features li {
+    padding: var(--spacing-xs) 0;
+    color: var(--text-gray);
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  .pricing-time {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  /* Additional Info */
+  .additional-info {
+    margin-top: var(--spacing-xl);
+  }
+
+  .additional-info h3 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .flow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .flow-step {
+    text-align: center;
+    padding: var(--spacing-md);
+  }
+
+  .step-number {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto var(--spacing-sm);
+  }
+
+  .flow-step h4 {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .flow-step p {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .notes {
+    background-color: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: 0.5rem;
+  }
+
+  .notes h4 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .notes ul {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+  }
+
+  .notes li {
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .cta-section h2 {
+    margin-bottom: var(--spacing-sm);
+    color: white;
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.95;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .work-item {
+      grid-template-columns: 1fr;
+    }
+
+    .work-image {
+      min-height: 200px;
+    }
+
+    .target-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .flow-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
