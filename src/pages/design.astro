@@ -206,39 +206,76 @@ import CTAButton from '../components/CTAButton.astro';
 </BaseLayout>
 
 <style>
-  /* Hero Section */
+  /* Hero Section - Flyer Style */
   .hero {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #ff6b9d 0%, #c94b4b 50%, #ff8e53 100%);
     color: white;
-    padding: var(--spacing-lg) 0;
+    padding: 5rem 0 4rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '🎨';
+    position: absolute;
+    font-size: 20rem;
+    opacity: 0.1;
+    top: -5rem;
+    right: -5rem;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
   }
 
   .hero-tag {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.25rem 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1.5rem;
     border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     margin-bottom: var(--spacing-sm);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+    position: relative;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     opacity: 0.95;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
-  /* Target Audience */
+  /* Target Audience - Flyer Card Style */
   .service-overview {
-    background-color: var(--bg-light);
+    background: linear-gradient(to bottom, #fff5f7 0%, #ffe4e6 100%);
+    position: relative;
+  }
+
+  .service-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #ff6b9d, #c94b4b, #ff8e53);
   }
 
   .target-grid {
@@ -248,122 +285,237 @@ import CTAButton from '../components/CTAButton.astro';
   }
 
   .target-item {
-    background-color: var(--bg-white);
+    background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
     padding: var(--spacing-md);
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.2);
     text-align: center;
+    border: 3px solid #ffccd5;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .target-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+    transform: rotate(45deg);
+  }
+
+  .target-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(255, 107, 157, 0.3);
+    border-color: #ff6b9d;
   }
 
   .target-icon {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: var(--spacing-sm);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+    position: relative;
+    z-index: 1;
   }
 
   .target-item h3 {
     margin-bottom: var(--spacing-xs);
+    color: #c94b4b;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
   }
 
   .target-item p {
     color: var(--text-gray);
     margin-bottom: 0;
+    position: relative;
+    z-index: 1;
   }
 
-  /* Works Gallery */
+  /* Works Gallery - Magazine Layout */
+  .works-gallery {
+    background: white;
+    position: relative;
+  }
+
   .gallery-grid {
     display: grid;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
   }
 
   .work-item {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: var(--spacing-md);
-    background-color: var(--bg-light);
-    border-radius: 0.5rem;
+    grid-template-columns: 400px 1fr;
+    gap: var(--spacing-lg);
+    background: linear-gradient(to right, #fff 0%, #fef3f4 100%);
+    border-radius: 1.5rem;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffe4e6;
+    transition: all 0.3s ease;
+  }
+
+  .work-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 50px rgba(255, 107, 157, 0.25);
+    border-color: #ffccd5;
   }
 
   .work-image {
-    background-color: #e5e7eb;
+    background: linear-gradient(135deg, #ffc2d1 0%, #ffaec5 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .work-image::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
   }
 
   .placeholder-image {
-    font-size: 4rem;
-    opacity: 0.5;
+    font-size: 5rem;
+    opacity: 0.7;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    position: relative;
   }
 
   .work-content {
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .work-content h3 {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: #c94b4b;
+    font-size: 1.75rem;
+    font-weight: 800;
+    border-bottom: 4px solid #ffe4e6;
+    padding-bottom: var(--spacing-xs);
   }
 
   .work-meta {
     margin-bottom: var(--spacing-md);
+    background: rgba(255, 228, 230, 0.3);
+    padding: var(--spacing-md);
+    border-radius: 0.75rem;
+    border-left: 5px solid #ff6b9d;
   }
 
   .work-meta p {
-    margin-bottom: var(--spacing-xs);
-    color: var(--text-gray);
-    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  .work-meta p:last-child {
+    margin-bottom: 0;
   }
 
   .work-meta strong {
-    color: var(--text-dark);
+    color: #c94b4b;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffe4e6, transparent);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
   }
 
   .work-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 
   .tag {
     display: inline-block;
-    background-color: #e0e7ff;
-    color: #4c1d95;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff8e53 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
     font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 107, 157, 0.3);
+    transition: all 0.3s ease;
   }
 
-  /* Pricing */
+  .tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 157, 0.4);
+  }
+
+  /* Pricing - Flyer Style Cards */
   .pricing-details {
-    background-color: var(--bg-white);
+    background: linear-gradient(to bottom, #fff5f7 0%, white 100%);
+    position: relative;
   }
 
   .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
   }
 
   .pricing-card {
-    background-color: var(--bg-light);
-    padding: var(--spacing-md);
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow);
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.15);
     text-align: center;
+    border: 4px solid #ffe4e6;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #ff6b9d, #ff8e53);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 107, 157, 0.3);
+    border-color: #ff6b9d;
   }
 
   .pricing-card h3 {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: #c94b4b;
+    font-weight: 800;
+    font-size: 1.5rem;
   }
 
   .price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ff6b9d;
     margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(255, 107, 157, 0.2);
   }
 
   .pricing-features {
@@ -377,76 +529,106 @@ import CTAButton from '../components/CTAButton.astro';
     padding: var(--spacing-xs) 0;
     color: var(--text-gray);
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
+    font-weight: 500;
   }
 
   .pricing-features li::before {
     content: "✓";
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: #ff6b9d;
     font-weight: bold;
+    font-size: 1.5rem;
   }
 
   .pricing-time {
-    color: var(--text-gray);
+    color: white;
     font-size: 0.875rem;
     margin-bottom: 0;
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff8e53 100%);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 107, 157, 0.3);
   }
 
-  /* Additional Info */
+  /* Additional Info - Flow Steps */
   .additional-info {
     margin-top: var(--spacing-xl);
   }
 
   .additional-info h3 {
     margin-bottom: var(--spacing-md);
+    color: #c94b4b;
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-align: center;
   }
 
   .flow-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
   }
 
   .flow-step {
     text-align: center;
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.15);
+    border: 3px solid #ffe4e6;
+    transition: all 0.3s ease;
+  }
+
+  .flow-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 107, 157, 0.25);
+    border-color: #ff6b9d;
   }
 
   .step-number {
-    width: 3rem;
-    height: 3rem;
-    background-color: var(--primary-color);
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff8e53 100%);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 900;
     margin: 0 auto var(--spacing-sm);
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
   }
 
   .flow-step h4 {
     margin-bottom: var(--spacing-xs);
+    color: #c94b4b;
+    font-weight: 700;
   }
 
   .flow-step p {
     color: var(--text-gray);
     font-size: 0.875rem;
     margin-bottom: 0;
+    line-height: 1.6;
   }
 
   .notes {
-    background-color: var(--bg-light);
-    padding: var(--spacing-md);
-    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe4e6 100%);
+    padding: var(--spacing-lg);
+    border-radius: 1rem;
+    border-left: 6px solid #ff6b9d;
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.15);
   }
 
   .notes h4 {
     margin-bottom: var(--spacing-sm);
+    color: #c94b4b;
+    font-weight: 800;
   }
 
   .notes ul {
@@ -455,37 +637,69 @@ import CTAButton from '../components/CTAButton.astro';
   }
 
   .notes li {
-    color: var(--text-gray);
-    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
   }
 
-  /* CTA Section */
+  /* CTA Section - Bold Flyer Style */
   .cta-section {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #ff6b9d 0%, #c94b4b 50%, #ff8e53 100%);
     color: white;
     text-align: center;
-    padding: var(--spacing-lg) 0;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '✨';
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.1;
+    top: -3rem;
+    left: -3rem;
+  }
+
+  .cta-section::after {
+    content: '🎨';
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.1;
+    bottom: -3rem;
+    right: -3rem;
   }
 
   .cta-section h2 {
     margin-bottom: var(--spacing-sm);
     color: white;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
   }
 
   .cta-section p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     margin-bottom: var(--spacing-md);
     opacity: 0.95;
+    position: relative;
+    z-index: 1;
   }
 
   /* Responsive */
   @media (max-width: 768px) {
     .hero-title {
-      font-size: 1.75rem;
+      font-size: 2.25rem;
     }
 
     .hero-subtitle {
-      font-size: 1rem;
+      font-size: 1.125rem;
+    }
+
+    .hero::before {
+      font-size: 10rem;
     }
 
     .work-item {
@@ -493,7 +707,7 @@ import CTAButton from '../components/CTAButton.astro';
     }
 
     .work-image {
-      min-height: 200px;
+      min-height: 250px;
     }
 
     .target-grid {
@@ -506,6 +720,11 @@ import CTAButton from '../components/CTAButton.astro';
 
     .flow-steps {
       grid-template-columns: 1fr;
+    }
+
+    .cta-section::before,
+    .cta-section::after {
+      font-size: 8rem;
     }
   }
 </style>
