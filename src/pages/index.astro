@@ -1,335 +1,126 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CTAButton from '../components/CTAButton.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import WorkCard from '../components/WorkCard.astro';
 ---
 
 <BaseLayout 
-  title="フリーランス | デザイン＆開発サービス - チラシ制作・PHP開発"
-  description="チラシ・ポスター制作とPHPシステム開発を提供するフリーランス。デザインと開発、どちらのニーズにも対応。実績と成果で選ばれています。"
+  title="ポートフォリオ | サービス一覧"
+  description="デザイン制作、システム開発、クロスワードパズル制作などのサービスを提供しています。"
 >
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1 class="hero-title">
-        デザインと開発で<br />
-        ビジネスを加速する
-      </h1>
-      <p class="hero-subtitle">
-        チラシ・ポスター制作からPHPシステム開発まで<br />
-        実績と成果にこだわるフリーランスのサービス
-      </p>
+      <h1>ポートフォリオ</h1>
+      <p class="intro">各種サービスをご提供しています。詳細は各ページをご覧ください。</p>
     </div>
   </section>
 
-  <!-- Service Entry Points -->
-  <section class="section service-entries">
+  <section class="services">
     <div class="container">
-      <h2 class="section-title">サービスを選択してください</h2>
-      <p class="section-intro">あなたのニーズに合わせて、最適なサービスをご提供します</p>
-      
-      <div class="entry-cards">
-        <!-- Design Entry -->
-        <div class="entry-card">
-          <div class="entry-icon">🎨</div>
-          <h3>チラシ・ポスター制作</h3>
-          <p class="entry-subtitle">Design</p>
-          <p class="entry-description">
-            店舗、イベント、広告など、目的に応じた印象的なデザインを制作。
-            ターゲットに響くビジュアルで、集客・認知度向上をサポートします。
-          </p>
-          <ul class="entry-features">
-            <li>イベントチラシ・フライヤー</li>
-            <li>店舗ポスター・POP</li>
-            <li>広告バナー・SNS画像</li>
-          </ul>
-          <div class="entry-cta">
-            <CTAButton text="デザイン実績を見る" href="/design" variant="primary" size="large" />
-          </div>
+      <div class="service-list">
+        
+        <div class="service-item">
+          <h2>
+            <a href="/design">チラシ・ポスター制作</a>
+          </h2>
+          <p>店舗、イベント、広告向けのチラシ・ポスター制作サービス。ターゲットに響くデザインで集客・認知度向上をサポートします。</p>
         </div>
 
-        <!-- Development Entry -->
-        <div class="entry-card">
-          <div class="entry-icon">⚙️</div>
-          <h3>PHPシステム開発</h3>
-          <p class="entry-subtitle">Development</p>
-          <p class="entry-description">
-            既存システムの改修・保守から新規開発まで対応。
-            業務効率化や管理画面構築で、ビジネスの成長を技術面から支援します。
-          </p>
-          <ul class="entry-features">
-            <li>既存システムの改修・保守</li>
-            <li>管理画面・業務システム</li>
-            <li>API開発・連携</li>
-          </ul>
-          <div class="entry-cta">
-            <CTAButton text="開発実績を見る" href="/dev" variant="primary" size="large" />
-          </div>
+        <div class="service-item">
+          <h2>
+            <a href="/dev">PHPシステム開発</a>
+          </h2>
+          <p>既存PHPシステムの改修・保守から新規開発まで対応。業務効率化や管理画面構築で、ビジネスの成長を技術面から支援します。</p>
         </div>
+
+        <div class="service-item">
+          <h2>
+            <a href="/crossword">クロスワードパズル制作</a>
+          </h2>
+          <p>オリジナルのクロスワードパズルを制作します。雑誌、イベント、教育用など、様々な用途に対応いたします。</p>
+        </div>
+
       </div>
-    </div>
-  </section>
-
-  <!-- Representative Works Preview -->
-  <section class="section works-preview">
-    <div class="container">
-      <h2 class="section-title">代表実績</h2>
-      
-      <div class="category-section">
-        <h3 class="category-title">
-          <span class="category-icon">🎨</span>
-          デザイン実績
-        </h3>
-        <div class="works-grid">
-          <WorkCard 
-            title="カフェオープンチラシ"
-            description="新規オープンのカフェ向けチラシ。温かみのある配色とイラストで、ターゲット層への訴求力を重視。配布後の来店率120%向上。"
-            tags={['チラシデザイン', 'Illustrator', 'カフェ']}
-            link="/design#work-cafe-flyer"
-          />
-          <WorkCard 
-            title="音楽イベントポスター"
-            description="地域音楽フェスティバルのポスター。力強いビジュアルで注目度アップ。前年比チケット売上150%達成に貢献。"
-            tags={['ポスターデザイン', 'Photoshop', 'イベント']}
-            link="/design#work-music-poster"
-          />
-          <WorkCard 
-            title="不動産会社の広告バナー"
-            description="Web広告用バナーセット。CTR2.5倍改善、問い合わせ数180%増加を実現。"
-            tags={['バナーデザイン', 'Web広告', '不動産']}
-            link="/design#work-real-estate-banner"
-          />
-        </div>
-        <div class="section-cta">
-          <CTAButton text="デザイン実績をもっと見る" href="/design" variant="secondary" />
-        </div>
-      </div>
-
-      <div class="category-section">
-        <h3 class="category-title">
-          <span class="category-icon">⚙️</span>
-          開発実績
-        </h3>
-        <div class="works-grid">
-          <WorkCard 
-            title="在庫管理システムの改修"
-            description="レガシーPHPシステムの改修。処理速度70%改善、エラー率90%削減。月間作業時間30時間短縮を達成。"
-            tags={['PHP改修', 'MySQL', '業務効率化']}
-            link="/dev#case-inventory-system"
-          />
-          <WorkCard 
-            title="会員管理システム新規構築"
-            description="WordPress + カスタムPHPで会員機能を実装。管理工数を従来の1/3に削減。"
-            tags={['PHP開発', 'WordPress', 'カスタム開発']}
-            link="/dev#case-member-system"
-          />
-          <WorkCard 
-            title="予約システムAPI連携"
-            description="既存予約システムと外部APIを連携。手動入力作業を完全自動化し、ミス率ゼロを実現。"
-            tags={['API開発', 'PHP', '自動化']}
-            link="/dev#case-booking-api"
-          />
-        </div>
-        <div class="section-cta">
-          <CTAButton text="開発実績をもっと見る" href="/dev" variant="secondary" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>ポートフォリオサイト</h2>
-      <p>チラシ・ポスター制作とシステム開発のサービスを提供しています。</p>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  /* Hero Section */
   .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: var(--spacing-lg) 0;
+    padding: 4rem 0;
     text-align: center;
   }
 
-  .hero-title {
+  .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: white;
   }
 
-  .hero-subtitle {
+  .intro {
     font-size: 1.125rem;
-    margin-bottom: 0;
     opacity: 0.95;
+    margin-bottom: 0;
   }
 
-  /* Service Entry Cards */
-  .service-entries {
-    background-color: var(--bg-light);
+  .services {
+    padding: 4rem 0;
   }
 
-  .section-intro {
-    text-align: center;
-    color: var(--text-gray);
-    margin-bottom: var(--spacing-lg);
-    font-size: 1.125rem;
-  }
-
-  .entry-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-lg);
-    max-width: 900px;
+  .service-list {
+    max-width: 800px;
     margin: 0 auto;
   }
 
-  .entry-card {
-    background-color: var(--bg-white);
-    padding: var(--spacing-lg);
-    border-radius: 1rem;
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .service-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
   }
 
-  .entry-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  .service-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
-  .entry-icon {
-    font-size: 4rem;
-    margin-bottom: var(--spacing-sm);
+  .service-item h2 {
+    margin-bottom: 0.75rem;
   }
 
-  .entry-card h3 {
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-xs);
-    color: var(--text-dark);
-  }
-
-  .entry-subtitle {
-    font-size: 0.875rem;
+  .service-item h2 a {
     color: var(--primary-color);
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--spacing-sm);
+    text-decoration: none;
+    transition: color 0.2s;
   }
 
-  .entry-description {
+  .service-item h2 a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+  }
+
+  .service-item p {
     color: var(--text-gray);
-    margin-bottom: var(--spacing-md);
     line-height: 1.6;
-  }
-
-  .entry-features {
-    list-style: none;
-    padding: 0;
-    margin-bottom: var(--spacing-md);
-    text-align: left;
-  }
-
-  .entry-features li {
-    padding: var(--spacing-xs) 0;
-    color: var(--text-gray);
-    position: relative;
-    padding-left: 1.5rem;
-  }
-
-  .entry-features li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
-  }
-
-  .entry-cta {
-    margin-top: var(--spacing-md);
-  }
-
-  /* Works Preview */
-  .works-preview {
-    background-color: var(--bg-white);
-  }
-
-  .category-section {
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .category-section:last-child {
     margin-bottom: 0;
   }
 
-  .category-title {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-  }
-
-  .category-icon {
-    font-size: 1.75rem;
-  }
-
-  .works-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .section-cta {
-    text-align: center;
-    margin-top: var(--spacing-md);
-  }
-
-  /* CTA Section */
-  .cta-section {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: var(--spacing-lg) 0;
-  }
-
-  .cta-section h2 {
-    margin-bottom: var(--spacing-sm);
-    color: white;
-  }
-
-  .cta-section p {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-md);
-    opacity: 0.95;
-  }
-
-  /* Responsive */
   @media (max-width: 768px) {
-    .hero-title {
+    .hero h1 {
       font-size: 1.75rem;
     }
 
-    .hero-subtitle {
+    .intro {
       font-size: 1rem;
     }
 
-    .entry-cards {
-      grid-template-columns: 1fr;
+    .services {
+      padding: 2rem 0;
     }
 
-    .works-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .entry-card h3 {
-      font-size: 1.5rem;
+    .service-item {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
     }
   }
 </style>
