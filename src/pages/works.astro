@@ -5,37 +5,79 @@ import WorkCard from '../components/WorkCard.astro';
 ---
 
 <BaseLayout 
-  title="実績紹介 - フリーランスWeb制作"
-  description="これまで手がけたWeb制作・改修プロジェクトの実績を紹介します。"
+  title="実績一覧 - デザイン＆開発サービス"
+  description="チラシ・ポスター制作とPHPシステム開発の実績を紹介します。カテゴリ別にご覧いただけます。"
 >
   <section class="page-header">
     <div class="container">
-      <h1>実績紹介</h1>
-      <p class="lead">課題解決と成果にこだわったプロジェクト事例</p>
+      <h1>実績一覧</h1>
+      <p class="lead">デザインと開発、それぞれの実績をご覧いただけます</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="works-grid">
-        <WorkCard 
-          title="ECサイトのパフォーマンス改善"
-          description="読込時間を3.5秒から1.2秒に短縮。離脱率25%改善、CV率18%向上を実現。"
-          tags={['パフォーマンス最適化', 'React', 'Next.js']}
-          link="/case-studies/ec-performance"
-        />
-        <WorkCard 
-          title="レガシーシステムのモダナイゼーション"
-          description="jQuery中心の古いコードベースをReactに段階移行。保守性向上とバグ70%削減。"
-          tags={['リファクタリング', 'React', 'TypeScript']}
-          link="/case-studies/legacy-modernization"
-        />
-        <WorkCard 
-          title="コーポレートサイトリニューアル"
-          description="Core Web Vitals全項目グリーン達成。問い合わせ数3倍増を実現。"
-          tags={['Webサイト制作', 'Astro', 'SEO']}
-          link="/case-studies/corporate-renewal"
-        />
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-category="all">すべて</button>
+        <button class="filter-tab" data-category="design">🎨 デザイン</button>
+        <button class="filter-tab" data-category="dev">⚙️ 開発</button>
+      </div>
+
+      <!-- Design Works -->
+      <div class="category-section" data-category="design">
+        <h2 class="category-title">
+          <span class="category-icon">🎨</span>
+          デザイン実績
+        </h2>
+        <div class="works-grid">
+          <WorkCard 
+            title="カフェオープンチラシ"
+            description="新規オープンのカフェ向けチラシ。温かみのある配色とイラストで、ターゲット層への訴求力を重視。配布後の来店率120%向上。"
+            tags={['チラシデザイン', 'Illustrator', 'カフェ']}
+            link="/design#work-cafe-flyer"
+          />
+          <WorkCard 
+            title="音楽イベントポスター"
+            description="地域音楽フェスティバルのポスター。力強いビジュアルで注目度アップ。前年比チケット売上150%達成に貢献。"
+            tags={['ポスターデザイン', 'Photoshop', 'イベント']}
+            link="/design#work-music-poster"
+          />
+          <WorkCard 
+            title="不動産会社の広告バナー"
+            description="Web広告用バナーセット。CTR2.5倍改善、問い合わせ数180%増加を実現。"
+            tags={['バナーデザイン', 'Web広告', '不動産']}
+            link="/design#work-real-estate-banner"
+          />
+        </div>
+      </div>
+
+      <!-- Development Works -->
+      <div class="category-section" data-category="dev">
+        <h2 class="category-title">
+          <span class="category-icon">⚙️</span>
+          開発実績
+        </h2>
+        <div class="works-grid">
+          <WorkCard 
+            title="在庫管理システムの改修"
+            description="レガシーPHPシステムの改修。処理速度70%改善、エラー率90%削減。月間作業時間30時間短縮を達成。"
+            tags={['PHP改修', 'MySQL', '業務効率化']}
+            link="/dev#case-inventory-system"
+          />
+          <WorkCard 
+            title="会員管理システム新規構築"
+            description="WordPress + カスタムPHPで会員機能を実装。管理工数を従来の1/3に削減。"
+            tags={['PHP開発', 'WordPress', 'カスタム開発']}
+            link="/dev#case-member-system"
+          />
+          <WorkCard 
+            title="予約システムAPI連携"
+            description="既存予約システムと外部APIを連携。手動入力作業を完全自動化し、ミス率ゼロを実現。"
+            tags={['API開発', 'PHP', '自動化']}
+            link="/dev#case-booking-api"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -43,7 +85,7 @@ import WorkCard from '../components/WorkCard.astro';
   <section class="cta-section">
     <div class="container">
       <h2>あなたのプロジェクトも成功させましょう</h2>
-      <p>同様の課題をお持ちの方、お気軽にご相談ください。</p>
+      <p>デザイン・開発、どちらのご相談も歓迎です。</p>
       <CTAButton text="無料相談はこちら" href="/contact" variant="primary" size="large" />
     </div>
   </section>
@@ -63,6 +105,61 @@ import WorkCard from '../components/WorkCard.astro';
   .lead {
     font-size: 1.25rem;
     color: var(--text-gray);
+  }
+
+  /* Filter Tabs */
+  .filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  .filter-tab {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--bg-light);
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-tab:hover {
+    background-color: #e5e7eb;
+  }
+
+  .filter-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+
+  /* Category Sections */
+  .category-section {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .category-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .category-section.hidden {
+    display: none;
+  }
+
+  .category-title {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+
+  .category-icon {
+    font-size: 2rem;
   }
 
   .works-grid {
@@ -93,5 +190,43 @@ import WorkCard from '../components/WorkCard.astro';
     .works-grid {
       grid-template-columns: 1fr;
     }
+
+    .filter-tabs {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .filter-tab {
+      width: 100%;
+    }
   }
 </style>
+
+<script>
+  // Category filtering functionality
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const categorySections = document.querySelectorAll('.category-section');
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const category = tab.getAttribute('data-category');
+
+      // Update active tab
+      filterTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Show/hide sections based on category
+      categorySections.forEach(section => {
+        const sectionCategory = section.getAttribute('data-category');
+        
+        if (category === 'all') {
+          section.classList.remove('hidden');
+        } else if (sectionCategory === category) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
