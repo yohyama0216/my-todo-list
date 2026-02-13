@@ -1,0 +1,249 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTAButton from '../../components/CTAButton.astro';
+---
+
+<BaseLayout 
+  title="コーポレートサイトリニューアル - 事例詳細"
+  description="Core Web Vitals全項目グリーン達成。問い合わせ数3倍増を実現した事例を詳しく紹介します。"
+>
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">ホーム</a> / <a href="/case-studies">事例紹介</a> / コーポレートサイトリニューアル
+      </nav>
+      <h1>コーポレートサイトリニューアル</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="case-study">
+        <div class="case-section">
+          <h2>課題</h2>
+          <ul>
+            <li>デザインが古く、企業イメージに合わない</li>
+            <li>スマホ対応が不十分</li>
+            <li>SEO対策がされておらず検索順位が低い</li>
+            <li>問い合わせフォームが使いにくい</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h2>実施した施策</h2>
+          <ul>
+            <li>Astroを使った高速な静的サイト構築</li>
+            <li>モバイルファーストのレスポンシブデザイン</li>
+            <li>構造化データとメタタグの最適化</li>
+            <li>ユーザビリティを考慮したフォーム設計</li>
+            <li>Core Web Vitals最適化</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h2>成果</h2>
+          <div class="results">
+            <div class="result-item">
+              <div class="result-number">100点</div>
+              <div class="result-label">Lighthouse<br />パフォーマンス</div>
+            </div>
+            <div class="result-item">
+              <div class="result-number">3倍</div>
+              <div class="result-label">問い合わせ数増加</div>
+            </div>
+            <div class="result-item">
+              <div class="result-number">グリーン</div>
+              <div class="result-label">Core Web Vitals<br />全項目</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h2>工数・期間</h2>
+          <p>約60時間 / 3週間</p>
+        </div>
+
+        <div class="case-section">
+          <h2>使用技術</h2>
+          <div class="tech-tags">
+            <span class="tech-tag">Astro</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Formspree</span>
+            <span class="tech-tag">GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="case-navigation">
+          <a href="/case-studies" class="nav-link">← すべての事例を見る</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>同じような課題をお持ちですか？</h2>
+      <p>まずは無料相談でお話を聞かせてください。最適なソリューションをご提案します。</p>
+      <CTAButton text="無料相談はこちら" href="/contact" variant="primary" size="large" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--bg-light);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+  }
+
+  .breadcrumb {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--text-gray);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--primary-color);
+  }
+
+  .page-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0;
+  }
+
+  .case-study {
+    background-color: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .case-section {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .case-section:last-of-type {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .case-section h2 {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .case-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .case-section li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .case-section li:before {
+    content: "●";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+  }
+
+  .result-item {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--bg-light);
+    border-radius: 0.5rem;
+  }
+
+  .result-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .result-label {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .tech-tag {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .case-navigation {
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+  }
+
+  .nav-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-hover);
+  }
+
+  .cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .cta-section h2 {
+    margin-bottom: var(--spacing-sm);
+    color: white;
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.95;
+  }
+
+  @media (max-width: 768px) {
+    .results {
+      grid-template-columns: 1fr;
+    }
+
+    .result-number {
+      font-size: 2rem;
+    }
+
+    .case-study {
+      padding: var(--spacing-md);
+    }
+  }
+</style>
