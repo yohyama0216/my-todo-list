@@ -1,0 +1,342 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="実績一覧 | ポートフォリオ"
+  description="デザイン制作とシステム開発の実績一覧。カテゴリフィルタで目的の実績を簡単に見つけられます。"
+>
+  <section class="hero">
+    <div class="container">
+      <h1>実績一覧</h1>
+      <p class="intro">これまでの制作実績をご紹介します。</p>
+    </div>
+  </section>
+
+  <section class="works-section">
+    <div class="container">
+      <!-- Category Filter -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">すべて</button>
+        <button class="filter-btn" data-category="design">デザイン</button>
+        <button class="filter-btn" data-category="development">開発</button>
+      </div>
+
+      <!-- Works Grid -->
+      <div class="works-grid">
+        
+        <!-- Design Work 1 -->
+        <div class="work-card" data-category="design">
+          <div class="work-image">
+            <div class="placeholder-image">🎨</div>
+          </div>
+          <div class="work-content">
+            <span class="work-category">デザイン</span>
+            <h3>カフェ新規オープンチラシ</h3>
+            <p>地域密着型カフェの新規オープン告知チラシ。温かみのある配色で20-40代女性をターゲットに制作。</p>
+            <div class="work-meta">
+              <strong>成果:</strong> 来店率120%向上
+            </div>
+            <div class="work-tags">
+              <span class="tag">チラシデザイン</span>
+              <span class="tag">Illustrator</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Work 2 -->
+        <div class="work-card" data-category="design">
+          <div class="work-image">
+            <div class="placeholder-image">📋</div>
+          </div>
+          <div class="work-content">
+            <span class="work-category">デザイン</span>
+            <h3>セミナー告知ポスター</h3>
+            <p>ビジネスセミナーの告知ポスター。信頼感を重視したデザインで参加者募集。</p>
+            <div class="work-meta">
+              <strong>成果:</strong> 申込数150%増加
+            </div>
+            <div class="work-tags">
+              <span class="tag">ポスターデザイン</span>
+              <span class="tag">Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Development Work 1 -->
+        <div class="work-card" data-category="development">
+          <div class="work-image">
+            <div class="placeholder-image">💻</div>
+          </div>
+          <div class="work-content">
+            <span class="work-category">開発</span>
+            <h3>ECサイトパフォーマンス改善</h3>
+            <p>既存ECサイトのページ読込速度を大幅に改善。SQLクエリ最適化とキャッシュ導入により高速化を実現。</p>
+            <div class="work-meta">
+              <strong>成果:</strong> 読込速度70%改善、CVR 15%向上
+            </div>
+            <div class="work-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">パフォーマンス改善</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Development Work 2 -->
+        <div class="work-card" data-category="development">
+          <div class="work-image">
+            <div class="placeholder-image">⚙️</div>
+          </div>
+          <div class="work-content">
+            <span class="work-category">開発</span>
+            <h3>管理画面新規構築</h3>
+            <p>在庫管理システムの管理画面を新規構築。直感的なUIで業務効率を大幅に向上。</p>
+            <div class="work-meta">
+              <strong>成果:</strong> 作業時間50%削減
+            </div>
+            <div class="work-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Work 3 -->
+        <div class="work-card" data-category="design">
+          <div class="work-image">
+            <div class="placeholder-image">🏪</div>
+          </div>
+          <div class="work-content">
+            <span class="work-category">デザイン</span>
+            <h3>店舗セールチラシ</h3>
+            <p>季節のセール告知チラシ。注目を集める配色とレイアウトで売上アップに貢献。</p>
+            <div class="work-meta">
+              <strong>成果:</strong> 売上200%増加
+            </div>
+            <div class="work-tags">
+              <span class="tag">チラシデザイン</span>
+              <span class="tag">Illustrator</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Development Work 3 -->
+        <div class="work-card" data-category="development">
+          <div class="work-image">
+            <div class="placeholder-image">🔧</div>
+          </div>
+          <div class="work-content">
+            <span class="work-category">開発</span>
+            <h3>レガシーシステム保守改修</h3>
+            <p>PHP 5系のレガシーシステムを8系へアップデート。セキュリティ強化と機能追加を実施。</p>
+            <div class="work-meta">
+              <strong>成果:</strong> セキュリティリスク解消、保守性向上
+            </div>
+            <div class="work-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">レガシー改修</span>
+              <span class="tag">セキュリティ</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    opacity: 0.95;
+    margin-bottom: 0;
+  }
+
+  .works-section {
+    padding: 4rem 0;
+  }
+
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .work-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .work-card.hidden {
+    display: none;
+  }
+
+  .work-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-image {
+    font-size: 4rem;
+  }
+
+  .work-content {
+    padding: 1.5rem;
+  }
+
+  .work-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--bg-light);
+    color: var(--text-gray);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .work-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+  }
+
+  .work-content p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .work-meta {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: var(--bg-light);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .work-meta strong {
+    color: var(--text-dark);
+  }
+
+  .work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #dbeafe;
+    color: var(--primary-color);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+    }
+
+    .works-section {
+      padding: 2rem 0;
+    }
+
+    .works-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .filter-buttons {
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Category filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const workCards = document.querySelectorAll('.work-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.dataset.category;
+
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Filter cards
+      workCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
