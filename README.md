@@ -1,25 +1,49 @@
 # フリーランスポートフォリオサイト
 
-フリーランスWeb制作者向けの、実績と成果を重視したポートフォリオサイトです。
+フリーランスのデザイン＆開発サービス向けの、実績と成果を重視したポートフォリオサイトです。
 GitHub Pagesで公開し、問い合わせ獲得を目的としています。
 
 ## 🎯 サイトの特徴
 
+- **2つのサービスを明確に分離**: デザイン（チラシ・ポスター制作）とPHP開発を分けて提示
+- **発注者目線の設計**: それぞれのサービスに1クリックでアクセス可能
 - **高速・軽量**: Astro製で Core Web Vitals 最適化済み
 - **SEO対策済み**: メタタグ、OGP、sitemap、robots.txt完備
 - **レスポンシブ**: モバイルファーストデザイン
-- **問い合わせ導線明確**: 各ページにCTAボタン配置
-- **Markdown対応**: コンテンツを簡単に更新可能
+- **問い合わせ導線明確**: サービス種別選択付きフォーム
 
 ## 📁 ページ構成
 
-- **Home (`/`)**: ヒーロー、価値提案、サービス・実績プレビュー
-- **Services (`/services`)**: 提供サービス、対応範囲、開発の進め方、使用技術
-- **Works (`/works`)**: 実績一覧
-- **Case Studies (`/case-studies`)**: 詳細な事例紹介（課題→施策→成果）
-- **About (`/about`)**: 概要、スキルセット、開発に対する考え方
-- **Pricing (`/pricing`)**: 料金体系、料金例、FAQ
+- **Home (`/`)**: 2つのサービス入口を明確に提示
+  - デザイン（チラシ・ポスター制作）入口
+  - 開発（PHPシステム開発）入口
+  - 各サービスの代表実績プレビュー
+
+- **Design (`/design`)**: チラシ・ポスター制作サービス
+  - 制作実績ギャラリー（目的・ターゲット・成果）
+  - 料金・納期の目安
+  - 制作の流れ
+
+- **Development (`/dev`)**: PHPシステム開発サービス
+  - ケーススタディ（課題→施策→成果）
+  - 対応範囲・使用技術
+  - 開発の進め方
+  - 料金・保守の目安
+
+- **Works (`/works`)**: 実績一覧（カテゴリフィルタ付き）
+  - デザイン実績
+  - 開発実績
+  - カテゴリ切り替え機能
+
+- **Pricing (`/pricing`)**: 料金体系
+  - デザイン料金
+  - 開発料金
+  - FAQ
+
 - **Contact (`/contact`)**: お問い合わせフォーム
+  - サービス種別選択（デザイン/開発/両方）
+  - 具体的な相談内容選択
+  - 必要情報の記入テンプレート
 
 ## 🚀 セットアップ
 
@@ -69,35 +93,89 @@ export default defineConfig({
 
 各ページは `src/pages/` ディレクトリにあります：
 
-- `index.astro` - ホームページ
-- `services.astro` - サービスページ
-- `works.astro` - 実績一覧
-- `case-studies.astro` - 事例詳細
-- `about.astro` - 概要
-- `pricing.astro` - 料金
-- `contact.astro` - お問い合わせ
+- `index.astro` - ホームページ（デザイン・開発の2つの入口）
+- `design.astro` - デザインサービスページ
+- `dev.astro` - 開発サービスページ
+- `works.astro` - 実績一覧（カテゴリフィルタ付き）
+- `pricing.astro` - 料金ページ
+- `contact.astro` - お問い合わせページ
 
 ファイルを直接編集して、テキストや構成を変更できます。
 
-### 3. 実績・事例の追加
+### 3. 実績の追加方法
 
-#### 方法1: ページに直接追加
+#### デザイン実績の追加
 
-`src/pages/works.astro` や `case-studies.astro` の内容を編集して、新しい事例を追加します。
+`src/pages/design.astro` を編集して、新しい作品を追加：
 
-#### 方法2: Markdownファイルで管理（推奨）
-
-`src/content/works/` ディレクトリにMarkdownファイルを作成：
-
-```markdown
----
-title: "プロジェクト名"
-description: "概要"
-tags: ["タグ1", "タグ2"]
----
-
-詳細な内容...
+```astro
+<div class="work-item" id="work-your-project">
+  <div class="work-image">
+    <div class="placeholder-image">🎨</div>
+  </div>
+  <div class="work-content">
+    <h3>プロジェクト名</h3>
+    <div class="work-meta">
+      <p><strong>目的:</strong> 新規オープン告知</p>
+      <p><strong>ターゲット:</strong> 20-40代女性</p>
+      <p><strong>工夫:</strong> 温かみのある配色</p>
+      <p><strong>成果:</strong> 来店率120%向上</p>
+      <p><strong>納品形式:</strong> PDF、PNG</p>
+    </div>
+    <div class="work-tags">
+      <span class="tag">チラシデザイン</span>
+      <span class="tag">Illustrator</span>
+    </div>
+  </div>
+</div>
 ```
+
+#### 開発実績の追加
+
+`src/pages/dev.astro` を編集して、新しい事例を追加：
+
+```astro
+<div class="case-item" id="case-your-project">
+  <div class="case-header">
+    <h3>プロジェクト名</h3>
+    <div class="case-tags">
+      <span class="tag">PHP改修</span>
+      <span class="tag">MySQL</span>
+    </div>
+  </div>
+  <div class="case-content">
+    <div class="case-section">
+      <h4>💡 課題</h4>
+      <ul>
+        <li>課題1</li>
+        <li>課題2</li>
+      </ul>
+    </div>
+    <div class="case-section">
+      <h4>🛠️ 実施した施策</h4>
+      <ul>
+        <li>施策1</li>
+        <li>施策2</li>
+      </ul>
+    </div>
+    <div class="case-section">
+      <h4>📈 成果</h4>
+      <ul>
+        <li><strong>70%改善</strong>: 処理速度</li>
+        <li><strong>90%削減</strong>: エラー率</li>
+      </ul>
+    </div>
+    <div class="case-meta">
+      <p><strong>期間・工数:</strong> 3週間 / 80時間</p>
+      <p><strong>使用技術:</strong> PHP 8.1、MySQL</p>
+    </div>
+  </div>
+</div>
+```
+
+#### 実績一覧ページへの追加
+
+`src/pages/works.astro` と `src/pages/index.astro` の該当箇所も更新してください。
 
 ### 4. お問い合わせフォームの設定
 

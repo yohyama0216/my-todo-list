@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout 
-  title="お問い合わせ - フリーランスWeb制作"
-  description="Web制作・改修のご相談、お見積もり依頼はこちらから。お気軽にお問い合わせください。"
+  title="お問い合わせ - デザイン＆開発サービス"
+  description="チラシ・ポスター制作、PHPシステム開発のご相談、お見積もり依頼はこちらから。お気軽にお問い合わせください。"
 >
   <section class="page-header">
     <div class="container">
@@ -38,12 +38,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <div class="info-box">
             <h3>対応可能な範囲</h3>
+            <p><strong>デザイン:</strong></p>
             <ul>
-              <li>Webサイト制作（コーポレート、LP等）</li>
-              <li>既存サイトの改修・最適化</li>
-              <li>フロントエンド開発</li>
+              <li>チラシ・ポスター制作</li>
+              <li>バナー・SNS画像</li>
+              <li>イベント告知デザイン</li>
+            </ul>
+            <p><strong>開発:</strong></p>
+            <ul>
+              <li>PHPシステム開発・改修</li>
               <li>WordPress カスタマイズ</li>
-              <li>技術コンサルティング</li>
+              <li>管理画面・業務システム</li>
+              <li>API開発・連携</li>
             </ul>
           </div>
         </div>
@@ -62,6 +68,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             method="POST"
             class="contact-form"
           >
+            <div class="form-group">
+              <label for="service-type">ご相談サービス <span class="required">*</span></label>
+              <select id="service-type" name="service-type" required>
+                <option value="">選択してください</option>
+                <option value="design">デザイン相談（チラシ・ポスター制作）</option>
+                <option value="dev">開発相談（PHPシステム開発）</option>
+                <option value="both">両方について相談したい</option>
+              </select>
+            </div>
+
             <div class="form-group">
               <label for="name">お名前 <span class="required">*</span></label>
               <input 
@@ -95,14 +111,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
 
             <div class="form-group">
-              <label for="project-type">ご相談内容 <span class="required">*</span></label>
+              <label for="project-type">具体的なご相談内容 <span class="required">*</span></label>
               <select id="project-type" name="project-type" required>
                 <option value="">選択してください</option>
-                <option value="新規サイト制作">新規サイト制作</option>
-                <option value="既存サイト改修">既存サイト改修</option>
-                <option value="パフォーマンス改善">パフォーマンス改善</option>
-                <option value="WordPress関連">WordPress関連</option>
-                <option value="技術相談">技術相談</option>
+                <optgroup label="デザイン関連">
+                  <option value="チラシ制作">チラシ制作</option>
+                  <option value="ポスター制作">ポスター制作</option>
+                  <option value="バナー・SNS画像">バナー・SNS画像</option>
+                  <option value="その他デザイン">その他デザイン</option>
+                </optgroup>
+                <optgroup label="開発関連">
+                  <option value="既存システム改修">既存システム改修</option>
+                  <option value="新規システム開発">新規システム開発</option>
+                  <option value="WordPress関連">WordPress関連</option>
+                  <option value="API開発・連携">API開発・連携</option>
+                  <option value="保守・サポート">保守・サポート</option>
+                  <option value="その他開発">その他開発</option>
+                </optgroup>
                 <option value="その他">その他</option>
               </select>
             </div>
@@ -137,7 +162,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 name="message" 
                 rows="8" 
                 required
-                placeholder="プロジェクトの概要、課題、ご要望などをお聞かせください。&#10;&#10;例：&#10;・コーポレートサイトをリニューアルしたい&#10;・既存サイトの表示速度が遅いので改善したい&#10;・レガシーなコードを整理したい"
+                placeholder="プロジェクトの概要、課題、ご要望などをお聞かせください。&#10;&#10;【デザインの場合】&#10;・目的（例：新規オープン告知、イベント集客など）&#10;・ターゲット層&#10;・希望する雰囲気・イメージ&#10;・使用場所（印刷、Web、SNSなど）&#10;&#10;【開発の場合】&#10;・解決したい課題&#10;・現在のシステム環境（わかる範囲で）&#10;・実現したい機能"
               ></textarea>
             </div>
 
@@ -342,50 +367,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </style>
 
 <script>
-  // Simple form handling (replace with actual Formspree integration)
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const successMessage = document.getElementById('form-success');
-  const errorMessage = document.getElementById('form-error');
+  document.addEventListener('DOMContentLoaded', () => {
+    // Pre-select service type from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    
+    // Validate and set service type
+    const validServiceTypes = ['design', 'dev', 'both'];
+    if (serviceParam && validServiceTypes.includes(serviceParam)) {
+      const serviceSelect = document.getElementById('service-type') as HTMLSelectElement;
+      if (serviceSelect) {
+        serviceSelect.value = serviceParam;
+      }
+    }
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      try {
-        const formData = new FormData(form);
+    // Simple form handling (replace with actual Formspree integration)
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const successMessage = document.getElementById('form-success');
+    const errorMessage = document.getElementById('form-error');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
         
-        // Replace YOUR_FORM_ID with actual Formspree form ID
-        // For now, just show success message
-        form.style.display = 'none';
-        if (successMessage) {
-          successMessage.style.display = 'block';
-        }
-        
-        // Uncomment when using actual Formspree:
-        /*
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-        
-        if (response.ok) {
+        try {
+          const formData = new FormData(form);
+          
+          // Replace YOUR_FORM_ID with actual Formspree form ID
+          // For now, just show success message
           form.style.display = 'none';
           if (successMessage) {
             successMessage.style.display = 'block';
           }
-        } else {
-          throw new Error('Form submission failed');
+          
+          // Uncomment when using actual Formspree:
+          /*
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            form.style.display = 'none';
+            if (successMessage) {
+              successMessage.style.display = 'block';
+            }
+          } else {
+            throw new Error('Form submission failed');
+          }
+          */
+        } catch (error) {
+          form.style.display = 'none';
+          if (errorMessage) {
+            errorMessage.style.display = 'block';
+          }
         }
-        */
-      } catch (error) {
-        form.style.display = 'none';
-        if (errorMessage) {
-          errorMessage.style.display = 'block';
-        }
-      }
-    });
-  }
+      });
+    }
+  });
 </script>

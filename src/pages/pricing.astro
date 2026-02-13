@@ -4,8 +4,8 @@ import CTAButton from '../components/CTAButton.astro';
 ---
 
 <BaseLayout 
-  title="料金 - フリーランスWeb制作"
-  description="Web制作・改修サービスの料金目安をご案内します。プロジェクトに応じて柔軟に対応可能です。"
+  title="料金 - デザイン＆開発サービス"
+  description="チラシ・ポスター制作とPHPシステム開発の料金目安をご案内します。プロジェクトに応じて柔軟に対応可能です。"
 >
   <section class="page-header">
     <div class="container">
@@ -23,117 +23,166 @@ import CTAButton from '../components/CTAButton.astro';
         </p>
       </div>
 
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>時給ベース</h3>
-          <div class="price">¥5,000〜8,000<span class="unit">/時間</span></div>
-          <ul class="pricing-features">
-            <li>小規模な改修や機能追加に最適</li>
-            <li>柔軟な対応が可能</li>
-            <li>作業時間に応じた明確な請求</li>
-          </ul>
-          <p class="pricing-note">※ 最低稼働時間：月10時間〜</p>
+      <!-- Design Pricing Section -->
+      <div class="service-pricing-section">
+        <h2 class="service-title">
+          <span class="service-icon">🎨</span>
+          デザイン料金
+        </h2>
+        
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>チラシデザイン</h3>
+            <div class="price">¥15,000〜</div>
+            <ul class="pricing-features">
+              <li>A4サイズ片面・両面対応</li>
+              <li>修正2回まで無料</li>
+              <li>印刷用PDF + Web用PNG納品</li>
+            </ul>
+            <p class="pricing-note">納期: 1〜2週間</p>
+          </div>
+
+          <div class="pricing-card">
+            <h3>ポスターデザイン</h3>
+            <div class="price">¥20,000〜</div>
+            <ul class="pricing-features">
+              <li>A3/B2サイズ対応</li>
+              <li>修正2回まで無料</li>
+              <li>印刷用AI/PDF + Web用JPEG納品</li>
+            </ul>
+            <p class="pricing-note">納期: 2〜3週間</p>
+          </div>
+
+          <div class="pricing-card">
+            <h3>バナー・SNS画像</h3>
+            <div class="price">¥8,000〜</div>
+            <ul class="pricing-features">
+              <li>各種サイズ対応</li>
+              <li>修正1回まで無料</li>
+              <li>Web用PNG納品</li>
+            </ul>
+            <p class="pricing-note">納期: 3〜7日</p>
+          </div>
         </div>
 
-        <div class="pricing-card featured">
-          <div class="featured-badge">おすすめ</div>
-          <h3>プロジェクトベース</h3>
-          <div class="price">¥200,000〜<span class="unit">/案件</span></div>
-          <ul class="pricing-features">
-            <li>新規サイト制作に最適</li>
-            <li>予算が明確で安心</li>
-            <li>要件定義から納品まで一貫対応</li>
+        <div class="notes-box">
+          <h4>デザイン料金に関する注意事項</h4>
+          <ul>
+            <li>修正回数は基本2回まで無料。3回目以降は追加料金が発生します</li>
+            <li>印刷手配は別途ご相談ください（提携印刷会社のご紹介可能）</li>
+            <li>写真素材の手配が必要な場合、別途ストックフォト費用が発生する場合があります</li>
           </ul>
-          <p class="pricing-note">※ 内容により個別お見積もり</p>
-        </div>
-
-        <div class="pricing-card">
-          <h3>月額サポート</h3>
-          <div class="price">¥100,000〜<span class="unit">/月</span></div>
-          <ul class="pricing-features">
-            <li>継続的な改善・保守に最適</li>
-            <li>優先的な対応</li>
-            <li>定期的な改善提案</li>
-          </ul>
-          <p class="pricing-note">※ 稼働時間：月20時間程度</p>
         </div>
       </div>
 
-      <div class="pricing-examples">
-        <h2>料金例</h2>
-        <div class="example-grid">
-          <div class="example-item">
-            <h3>コーポレートサイト制作</h3>
-            <div class="example-details">
-              <div class="example-spec">
-                <strong>規模：</strong>5〜10ページ程度
-              </div>
-              <div class="example-spec">
-                <strong>期間：</strong>3〜4週間
-              </div>
-              <div class="example-price">¥300,000〜500,000</div>
-            </div>
-            <p class="example-includes">
-              企画・設計、デザイン実装、レスポンシブ対応、SEO対策、問い合わせフォーム設置を含む
-            </p>
+      <!-- Development Pricing Section -->
+      <div class="service-pricing-section">
+        <h2 class="service-title">
+          <span class="service-icon">⚙️</span>
+          開発料金
+        </h2>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>時給ベース</h3>
+            <div class="price">¥6,000〜8,000<span class="unit">/時間</span></div>
+            <ul class="pricing-features">
+              <li>小規模な改修・機能追加</li>
+              <li>スポット対応</li>
+              <li>作業時間が読みにくい案件</li>
+            </ul>
+            <p class="pricing-note">最低稼働: 月10時間〜</p>
           </div>
 
-          <div class="example-item">
-            <h3>ランディングページ制作</h3>
-            <div class="example-details">
-              <div class="example-spec">
-                <strong>規模：</strong>1ページ
-              </div>
-              <div class="example-spec">
-                <strong>期間：</strong>1〜2週間
-              </div>
-              <div class="example-price">¥100,000〜200,000</div>
-            </div>
-            <p class="example-includes">
-              デザイン実装、アニメーション、フォーム設置、CV最適化を含む
-            </p>
+          <div class="pricing-card featured">
+            <div class="featured-badge">おすすめ</div>
+            <h3>プロジェクトベース</h3>
+            <div class="price">¥250,000〜<span class="unit">/案件</span></div>
+            <ul class="pricing-features">
+              <li>新規システム開発</li>
+              <li>要件定義から納品まで</li>
+              <li>予算を明確にしたい</li>
+            </ul>
+            <p class="pricing-note">内容により個別お見積もり</p>
           </div>
 
-          <div class="example-item">
-            <h3>既存サイトのパフォーマンス改善</h3>
-            <div class="example-details">
-              <div class="example-spec">
-                <strong>規模：</strong>既存サイト
-              </div>
-              <div class="example-spec">
-                <strong>期間：</strong>2〜3週間
-              </div>
-              <div class="example-price">¥150,000〜300,000</div>
-            </div>
-            <p class="example-includes">
-              調査・分析、最適化実装、Core Web Vitals改善、レポート作成を含む
-            </p>
+          <div class="pricing-card">
+            <h3>月額保守</h3>
+            <div class="price">¥100,000〜<span class="unit">/月</span></div>
+            <ul class="pricing-features">
+              <li>継続的な改善・保守</li>
+              <li>優先対応</li>
+              <li>定期的な改善提案</li>
+            </ul>
+            <p class="pricing-note">稼働時間: 月20時間程度</p>
           </div>
+        </div>
 
-          <div class="example-item">
-            <h3>WordPress既存サイト改修</h3>
-            <div class="example-details">
-              <div class="example-spec">
-                <strong>規模：</strong>機能追加・デザイン変更
+        <div class="pricing-examples">
+          <h3>開発料金例</h3>
+          <div class="example-grid">
+            <div class="example-item">
+              <h4>既存システム改修</h4>
+              <div class="example-details">
+                <div class="example-spec">
+                  <strong>内容：</strong>機能追加、バグ修正、パフォーマンス改善
+                </div>
+                <div class="example-spec">
+                  <strong>期間：</strong>2〜3週間
+                </div>
+                <div class="example-price">¥150,000〜300,000</div>
               </div>
-              <div class="example-spec">
-                <strong>期間：</strong>1〜2週間
-              </div>
-              <div class="example-price">¥100,000〜250,000</div>
             </div>
-            <p class="example-includes">
-              要件ヒアリング、カスタマイズ実装、テスト、マニュアル作成を含む
-            </p>
+
+            <div class="example-item">
+              <h4>管理画面構築</h4>
+              <div class="example-details">
+                <div class="example-spec">
+                  <strong>内容：</strong>CRUD機能、検索、CSV出力
+                </div>
+                <div class="example-spec">
+                  <strong>期間：</strong>3〜4週間
+                </div>
+                <div class="example-price">¥250,000〜400,000</div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <h4>API開発・連携</h4>
+              <div class="example-details">
+                <div class="example-spec">
+                  <strong>内容：</strong>外部APIとの連携、データ同期
+                </div>
+                <div class="example-spec">
+                  <strong>期間：</strong>2〜3週間
+                </div>
+                <div class="example-price">¥200,000〜350,000</div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div class="notes-box">
+          <h4>開発料金に関する注意事項</h4>
+          <ul>
+            <li>納品後1ヶ月間は不具合対応を無償で実施</li>
+            <li>営業時間: 平日10:00-18:00（土日祝は要相談）</li>
+            <li>緊急対応: 別途ご相談（追加料金が発生する場合あり）</li>
+          </ul>
         </div>
       </div>
 
+      <!-- FAQ Section -->
       <div class="faq-section">
         <h2>よくある質問</h2>
         <div class="faq-list">
           <div class="faq-item">
             <h3>Q. 見積もりは無料ですか？</h3>
-            <p>はい、お見積もりは無料です。まずはお気軽にご相談ください。</p>
+            <p>はい、デザイン・開発ともにお見積もりは無料です。まずはお気軽にご相談ください。</p>
+          </div>
+          <div class="faq-item">
+            <h3>Q. デザインと開発、両方を依頼できますか？</h3>
+            <p>はい、可能です。例えば「チラシデザイン＋予約システム開発」など、複合的なご依頼にも対応できます。</p>
           </div>
           <div class="faq-item">
             <h3>Q. 支払い方法は？</h3>
@@ -149,7 +198,11 @@ import CTAButton from '../components/CTAButton.astro';
           </div>
           <div class="faq-item">
             <h3>Q. 納品後のサポートはありますか？</h3>
-            <p>納品後1ヶ月間は不具合対応を無償で行います。それ以降は月額サポートプランをご利用いただけます。</p>
+            <p>デザイン：納品後の微調整は別途ご相談。開発：納品後1ヶ月間は不具合対応を無償で行います。それ以降は月額サポートプランをご利用いただけます。</p>
+          </div>
+          <div class="faq-item">
+            <h3>Q. 急ぎの案件にも対応できますか？</h3>
+            <p>スケジュール次第で対応可能です。まずは納期をお聞かせください。</p>
           </div>
         </div>
       </div>
@@ -159,7 +212,7 @@ import CTAButton from '../components/CTAButton.astro';
   <section class="cta-section">
     <div class="container">
       <h2>まずは無料でお見積もり</h2>
-      <p>プロジェクトの内容をお聞かせください。最適なプランをご提案します。</p>
+      <p>デザイン・開発、どちらのプロジェクトもお気軽にご相談ください。</p>
       <CTAButton text="無料相談・見積もり依頼" href="/contact" variant="primary" size="large" />
     </div>
   </section>
@@ -189,11 +242,34 @@ import CTAButton from '../components/CTAButton.astro';
     color: var(--text-gray);
   }
 
+  /* Service Pricing Section */
+  .service-pricing-section {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 2px solid var(--bg-light);
+  }
+
+  .service-pricing-section:last-of-type {
+    border-bottom: none;
+  }
+
+  .service-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
   .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
   }
 
   .pricing-card {
@@ -257,6 +333,7 @@ import CTAButton from '../components/CTAButton.astro';
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
+    font-size: 0.875rem;
   }
 
   .pricing-features li:before {
@@ -273,20 +350,42 @@ import CTAButton from '../components/CTAButton.astro';
     margin-bottom: 0;
   }
 
-  .pricing-examples,
-  .faq-section {
-    margin-top: var(--spacing-xl);
+  /* Notes Box */
+  .notes-box {
+    background-color: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: 0.5rem;
+    margin-top: var(--spacing-lg);
   }
 
-  .pricing-examples h2,
-  .faq-section h2 {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
+  .notes-box h4 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+  }
+
+  .notes-box ul {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+  }
+
+  .notes-box li {
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.875rem;
+  }
+
+  /* Pricing Examples */
+  .pricing-examples {
+    margin-top: var(--spacing-lg);
+  }
+
+  .pricing-examples h3 {
+    margin-bottom: var(--spacing-md);
   }
 
   .example-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
   }
 
@@ -296,9 +395,9 @@ import CTAButton from '../components/CTAButton.astro';
     border-radius: 0.5rem;
   }
 
-  .example-item h3 {
+  .example-item h4 {
     margin-bottom: var(--spacing-sm);
-    color: var(--primary-color);
+    color: var(--text-dark);
   }
 
   .example-details {
@@ -306,21 +405,26 @@ import CTAButton from '../components/CTAButton.astro';
   }
 
   .example-spec {
-    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
     color: var(--text-gray);
+    margin-bottom: var(--spacing-xs);
   }
 
   .example-price {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
-    margin: var(--spacing-sm) 0;
+    margin-top: var(--spacing-sm);
   }
 
-  .example-includes {
-    font-size: 0.875rem;
-    color: var(--text-gray);
-    margin-bottom: 0;
+  /* FAQ Section */
+  .faq-section {
+    margin-top: var(--spacing-xl);
+  }
+
+  .faq-section h2 {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
   }
 
   .faq-list {
@@ -329,23 +433,25 @@ import CTAButton from '../components/CTAButton.astro';
   }
 
   .faq-item {
-    background-color: var(--bg-white);
+    background-color: var(--bg-light);
     padding: var(--spacing-md);
     border-radius: 0.5rem;
-    box-shadow: var(--shadow);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
   }
 
   .faq-item h3 {
     color: var(--primary-color);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
   }
 
   .faq-item p {
+    color: var(--text-gray);
     margin-bottom: 0;
-    color: var(--text-dark);
+    line-height: 1.7;
   }
 
+  /* CTA Section */
   .cta-section {
     background-color: var(--primary-color);
     color: white;
@@ -368,6 +474,10 @@ import CTAButton from '../components/CTAButton.astro';
     .pricing-grid,
     .example-grid {
       grid-template-columns: 1fr;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
     }
 
     .price {
