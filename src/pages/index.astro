@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout 
@@ -20,21 +19,21 @@ const base = import.meta.env.BASE_URL;
         
         <div class="service-item">
           <h2>
-            <a href={`${base}/design/`}>チラシ・ポスター制作</a>
+            <a href="/design">チラシ・ポスター制作</a>
           </h2>
           <p>店舗、イベント、広告向けのチラシ・ポスター制作サービス。ターゲットに響くデザインで集客・認知度向上をサポートします。</p>
         </div>
 
         <div class="service-item">
           <h2>
-            <a href={`${base}/dev/`}>PHPシステム開発</a>
+            <a href="/dev">PHPシステム開発</a>
           </h2>
           <p>既存PHPシステムの改修・保守から新規開発まで対応。業務効率化や管理画面構築で、ビジネスの成長を技術面から支援します。</p>
         </div>
 
         <div class="service-item">
           <h2>
-            <a href={`${base}/crossword/`}>クロスワードパズル制作</a>
+            <a href="/crossword">クロスワードパズル制作</a>
           </h2>
           <p>オリジナルのクロスワードパズルを制作します。雑誌、イベント、教育用など、様々な用途に対応いたします。</p>
         </div>

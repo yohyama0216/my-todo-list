@@ -8,7 +8,6 @@ interface Props {
 const { title, description, ogImage = '/images/og-default.jpg' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
-const base = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
@@ -47,12 +46,12 @@ const base = import.meta.env.BASE_URL;
 <body>
   <header class="header">
     <nav class="nav container">
-      <a href={base} class="nav-logo">ポートフォリオ</a>
+      <a href="/" class="nav-logo">ポートフォリオ</a>
       <ul class="nav-menu">
-        <li><a href={base}>ホーム</a></li>
-        <li><a href={`${base}/design/`}>チラシ・ポスター制作</a></li>
-        <li><a href={`${base}/dev/`}>システム開発</a></li>
-        <li><a href={`${base}/crossword/`}>クロスワードパズル</a></li>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/design">チラシ・ポスター制作</a></li>
+        <li><a href="/dev">システム開発</a></li>
+        <li><a href="/crossword">クロスワードパズル</a></li>
       </ul>
     </nav>
   </header>
@@ -67,10 +66,10 @@ const base = import.meta.env.BASE_URL;
         <div class="footer-section">
           <h3>サービス</h3>
           <ul>
-            <li><a href={base}>ホーム</a></li>
-            <li><a href={`${base}/design/`}>チラシ・ポスター制作</a></li>
-            <li><a href={`${base}/dev/`}>システム開発</a></li>
-            <li><a href={`${base}/crossword/`}>クロスワードパズル</a></li>
+            <li><a href="/">ホーム</a></li>
+            <li><a href="/design">チラシ・ポスター制作</a></li>
+            <li><a href="/dev">システム開発</a></li>
+            <li><a href="/crossword">クロスワードパズル</a></li>
           </ul>
         </div>
       </div>
