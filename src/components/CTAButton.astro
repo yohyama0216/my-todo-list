@@ -1,0 +1,22 @@
+---
+interface Props {
+  text: string;
+  href: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'normal' | 'large';
+}
+
+const { text, href, variant = 'primary', size = 'normal' } = Astro.props;
+const sizeClass = size === 'large' ? 'btn-large' : '';
+---
+
+<a href={href} class={`btn btn-${variant} ${sizeClass}`}>
+  {text}
+</a>
+
+<style>
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+</style>

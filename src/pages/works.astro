@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import WorkCard from '../components/WorkCard.astro';
+---
+
+<BaseLayout 
+  title="実績紹介 - フリーランスWeb制作"
+  description="これまで手がけたWeb制作・改修プロジェクトの実績を紹介します。"
+>
+  <section class="page-header">
+    <div class="container">
+      <h1>実績紹介</h1>
+      <p class="lead">課題解決と成果にこだわったプロジェクト事例</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="works-grid">
+        <WorkCard 
+          title="ECサイトのパフォーマンス改善"
+          description="読込時間を3.5秒から1.2秒に短縮。離脱率25%改善、CV率18%向上を実現。"
+          tags={['パフォーマンス最適化', 'React', 'Next.js']}
+          link="/case-studies/ec-performance"
+        />
+        <WorkCard 
+          title="レガシーシステムのモダナイゼーション"
+          description="jQuery中心の古いコードベースをReactに段階移行。保守性向上とバグ70%削減。"
+          tags={['リファクタリング', 'React', 'TypeScript']}
+          link="/case-studies/legacy-modernization"
+        />
+        <WorkCard 
+          title="コーポレートサイトリニューアル"
+          description="Core Web Vitals全項目グリーン達成。問い合わせ数3倍増を実現。"
+          tags={['Webサイト制作', 'Astro', 'SEO']}
+          link="/case-studies/corporate-renewal"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>あなたのプロジェクトも成功させましょう</h2>
+      <p>同様の課題をお持ちの方、お気軽にご相談ください。</p>
+      <CTAButton text="無料相談はこちら" href="/contact" variant="primary" size="large" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--bg-light);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+  }
+
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .cta-section h2 {
+    margin-bottom: var(--spacing-sm);
+    color: white;
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.95;
+  }
+
+  @media (max-width: 768px) {
+    .works-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

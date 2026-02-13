@@ -1,0 +1,28 @@
+{
+  "name": "freelance-portfolio",
+  "version": "1.0.0",
+  "description": "Professional freelance portfolio website built with Astro",
+  "main": "app.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohyama0216/my-todo-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yohyama0216/my-todo-list/issues"
+  },
+  "homepage": "https://github.com/yohyama0216/my-todo-list#readme",
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.17.2"
+  }
+}
