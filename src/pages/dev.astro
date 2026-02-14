@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CTAButton from '../components/CTAButton.astro';
 ---
 
 <BaseLayout 
@@ -8,1012 +7,250 @@ import CTAButton from '../components/CTAButton.astro';
   description="既存PHPシステムの改修・保守から新規開発まで対応。業務効率化、管理画面構築、API開発で、ビジネスの成長を技術面から支援します。"
 >
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-tag">Development</div>
-      <h1 class="hero-title">PHPシステム開発</h1>
-      <p class="hero-subtitle">
-        既存システムの改修から新規開発まで、業務効率化を実現
-      </p>
+  <section class="bg-success bg-gradient text-white py-5">
+    <div class="container text-center">
+      <span class="badge bg-light text-success mb-3">Development</span>
+      <h1 class="display-4 fw-bold">PHPシステム開発</h1>
+      <p class="lead">既存システムの改修から新規開発まで、業務効率化を実現</p>
     </div>
   </section>
 
   <!-- Service Overview -->
-  <section class="section service-overview">
+  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">こんな方におすすめ</h2>
-      <div class="target-grid">
-        <div class="target-item">
-          <div class="target-icon">🔧</div>
-          <h3>既存システムの改修・保守</h3>
-          <p>動いているが古いシステムの改善、バグ修正、機能追加</p>
+      <h2 class="text-center mb-5">こんな方におすすめ</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="fs-1 mb-3">🔧</div>
+              <h3 class="h5 card-title">既存システムの改修・保守</h3>
+              <p class="card-text text-muted">動いているが古いシステムの改善、バグ修正、機能追加</p>
+            </div>
+          </div>
         </div>
-        <div class="target-item">
-          <div class="target-icon">💼</div>
-          <h3>業務効率化</h3>
-          <p>手作業を自動化、管理画面の構築、データ連携</p>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="fs-1 mb-3">💼</div>
+              <h3 class="h5 card-title">業務効率化</h3>
+              <p class="card-text text-muted">手作業を自動化、管理画面の構築、データ連携</p>
+            </div>
+          </div>
         </div>
-        <div class="target-item">
-          <div class="target-icon">🚀</div>
-          <h3>小規模な新規開発</h3>
-          <p>予約システム、会員管理、在庫管理など</p>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="fs-1 mb-3">🚀</div>
+              <h3 class="h5 card-title">小規模な新規開発</h3>
+              <p class="card-text text-muted">予約システム、会員管理、在庫管理など</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Scope -->
-  <section class="section scope-section">
+  <section class="py-5">
     <div class="container">
-      <h2 class="section-title">対応範囲</h2>
-      <div class="scope-grid">
-        <div class="scope-category">
-          <h3>✅ 得意な領域</h3>
-          <ul>
-            <li>既存PHPシステムの改修・保守</li>
-            <li>レガシーコードのリファクタリング</li>
-            <li>WordPressカスタマイズ・プラグイン開発</li>
-            <li>管理画面・業務システムの構築</li>
-            <li>API開発・外部サービス連携</li>
-            <li>データベース設計・最適化（MySQL）</li>
-            <li>パフォーマンス改善・高速化</li>
-            <li>バグ修正・デバッグ</li>
-          </ul>
+      <h2 class="text-center mb-5">対応範囲</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header bg-success text-white">
+              <h3 class="h5 mb-0">✅ 得意な領域</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li class="mb-2">✓ 既存PHPシステムの改修・保守</li>
+                <li class="mb-2">✓ レガシーコードのリファクタリング</li>
+                <li class="mb-2">✓ WordPressカスタマイズ・プラグイン開発</li>
+                <li class="mb-2">✓ 管理画面・業務システムの構築</li>
+                <li class="mb-2">✓ API開発・外部サービス連携</li>
+                <li class="mb-2">✓ データベース設計・最適化（MySQL）</li>
+                <li class="mb-2">✓ パフォーマンス改善・高速化</li>
+                <li class="mb-2">✓ バグ修正・デバッグ</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="scope-category">
-          <h3>📋 対応フレームワーク・技術</h3>
-          <ul>
-            <li>PHP 7.x / 8.x</li>
-            <li>Laravel、CodeIgniter</li>
-            <li>WordPress、EC-CUBE</li>
-            <li>MySQL、PostgreSQL</li>
-            <li>REST API、JSON</li>
-            <li>Git、Composer</li>
-            <li>HTML/CSS/JavaScript</li>
-            <li>Linux サーバー管理基礎</li>
-          </ul>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header bg-info text-white">
+              <h3 class="h5 mb-0">📋 対応フレームワーク・技術</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li class="mb-2">✓ PHP 7.x / 8.x</li>
+                <li class="mb-2">✓ Laravel、CodeIgniter</li>
+                <li class="mb-2">✓ WordPress、EC-CUBE</li>
+                <li class="mb-2">✓ MySQL、PostgreSQL</li>
+                <li class="mb-2">✓ REST API、JSON</li>
+                <li class="mb-2">✓ Git、Composer</li>
+                <li class="mb-2">✓ HTML/CSS/JavaScript</li>
+                <li class="mb-2">✓ Linux サーバー管理基礎</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Case Studies -->
-  <section class="section case-studies">
+  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">開発事例</h2>
+      <h2 class="text-center mb-5">開発事例</h2>
       
       <!-- Case 1 -->
-      <div class="case-item" id="case-inventory-system">
-        <div class="case-header">
-          <h3>在庫管理システムの改修</h3>
-          <div class="case-tags">
-            <span class="tag">PHP改修</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">業務効率化</span>
+      <div class="card mb-4">
+        <div class="card-header">
+          <h3 class="h5 mb-2">在庫管理システムの改修</h3>
+          <div>
+            <span class="badge bg-primary me-1">PHP改修</span>
+            <span class="badge bg-primary me-1">MySQL</span>
+            <span class="badge bg-primary">業務効率化</span>
           </div>
         </div>
-        
-        <div class="case-content">
-          <div class="case-section">
-            <h4>💡 課題</h4>
-            <ul>
-              <li>10年前に開発されたレガシーPHPシステム（PHP 5.3）</li>
-              <li>在庫更新処理が遅く、1回の処理に30秒以上かかる</li>
-              <li>エラーが頻発し、月10時間以上の手動修正作業が発生</li>
-              <li>新機能追加が困難（コードの可読性が低い）</li>
-            </ul>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <h4 class="h6">💡 課題</h4>
+              <ul class="small">
+                <li>10年前のレガシーPHPシステム（PHP 5.3）</li>
+                <li>処理が遅く30秒以上かかる</li>
+                <li>エラーが頻発し月10時間の手動修正</li>
+                <li>新機能追加が困難</li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h4 class="h6">🛠️ 実施した施策</h4>
+              <ul class="small">
+                <li>PHPバージョンアップ（5.3→8.1）</li>
+                <li>データベースクエリの最適化</li>
+                <li>処理ロジックの見直し</li>
+                <li>エラーハンドリングの改善</li>
+                <li>コードのリファクタリング</li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h4 class="h6">📈 成果</h4>
+              <ul class="small">
+                <li><strong>処理速度70%改善</strong>: 30秒→9秒</li>
+                <li><strong>エラー率90%削減</strong></li>
+                <li><strong>月間30時間短縮</strong></li>
+                <li><strong>保守性向上</strong></li>
+              </ul>
+            </div>
           </div>
-
-          <div class="case-section">
-            <h4>🛠️ 実施した施策</h4>
-            <ul>
-              <li>PHPバージョンアップ（5.3 → 8.1）と非推奨機能の修正</li>
-              <li>データベースクエリの最適化（インデックス追加、N+1問題解消）</li>
-              <li>処理ロジックの見直し（バッチ処理化、キャッシュ導入）</li>
-              <li>エラーハンドリングの改善とログ機能追加</li>
-              <li>コードのリファクタリング（関数分割、命名規則統一）</li>
-            </ul>
-          </div>
-
-          <div class="case-section">
-            <h4>📈 成果</h4>
-            <ul>
-              <li><strong>処理速度70%改善</strong>: 30秒 → 9秒に短縮</li>
-              <li><strong>エラー率90%削減</strong>: 月10件 → 1件以下</li>
-              <li><strong>月間作業時間30時間短縮</strong>: 手動修正作業がほぼゼロに</li>
-              <li><strong>保守性向上</strong>: 新機能追加が容易になり、開発時間1/3に</li>
-            </ul>
-          </div>
-
-          <div class="case-meta">
-            <p><strong>期間・工数:</strong> 3週間 / 約80時間</p>
-            <p><strong>使用技術:</strong> PHP 8.1、MySQL 8.0、Redis、Git</p>
+          <div class="mt-3 text-muted small">
+            <p class="mb-1"><strong>期間・工数:</strong> 3週間 / 約80時間</p>
+            <p class="mb-0"><strong>使用技術:</strong> PHP 8.1、MySQL 8.0、Redis、Git</p>
           </div>
         </div>
       </div>
 
       <!-- Case 2 -->
-      <div class="case-item" id="case-member-system">
-        <div class="case-header">
-          <h3>会員管理システム新規構築</h3>
-          <div class="case-tags">
-            <span class="tag">PHP開発</span>
-            <span class="tag">WordPress</span>
-            <span class="tag">カスタム開発</span>
+      <div class="card mb-4">
+        <div class="card-header">
+          <h3 class="h5 mb-2">会員管理システム新規構築</h3>
+          <div>
+            <span class="badge bg-primary me-1">PHP開発</span>
+            <span class="badge bg-primary me-1">WordPress</span>
+            <span class="badge bg-primary">カスタム開発</span>
           </div>
         </div>
-        
-        <div class="case-content">
-          <div class="case-section">
-            <h4>💡 課題</h4>
-            <ul>
-              <li>Excelで会員情報を管理しており、検索・更新が非効率</li>
-              <li>複数人での同時編集ができず、情報の重複・漏れが発生</li>
-              <li>会員向けメール配信を手動で行っており、時間がかかる</li>
-              <li>会員数が増加し、手動管理の限界を感じている</li>
-            </ul>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <h4 class="h6">💡 課題</h4>
+              <ul class="small">
+                <li>Excelで会員情報を管理し非効率</li>
+                <li>複数人での同時編集不可</li>
+                <li>メール配信を手動で実施</li>
+                <li>会員数増加で手動管理の限界</li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h4 class="h6">🛠️ 実施した施策</h4>
+              <ul class="small">
+                <li>WordPressベースの会員管理機能</li>
+                <li>会員登録・編集・検索機能</li>
+                <li>メール配信機能</li>
+                <li>CSVインポート・エクスポート</li>
+                <li>権限管理機能</li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h4 class="h6">📈 成果</h4>
+              <ul class="small">
+                <li><strong>管理工数1/3に削減</strong></li>
+                <li><strong>情報の正確性向上</strong></li>
+                <li><strong>メール配信90%短縮</strong></li>
+                <li><strong>同時作業が可能に</strong></li>
+              </ul>
+            </div>
           </div>
-
-          <div class="case-section">
-            <h4>🛠️ 実施した施策</h4>
-            <ul>
-              <li>WordPressをベースに会員管理機能をカスタム開発</li>
-              <li>会員登録・編集・検索機能の実装</li>
-              <li>メール配信機能（セグメント配信、テンプレート機能）</li>
-              <li>CSVインポート・エクスポート機能</li>
-              <li>権限管理（管理者・スタッフで閲覧範囲を制御）</li>
-            </ul>
-          </div>
-
-          <div class="case-section">
-            <h4>📈 成果</h4>
-            <ul>
-              <li><strong>管理工数1/3に削減</strong>: 月15時間 → 5時間</li>
-              <li><strong>情報の正確性向上</strong>: 重複・漏れがゼロに</li>
-              <li><strong>メール配信時間90%短縮</strong>: 2時間 → 10分</li>
-              <li><strong>複数人での同時作業が可能に</strong></li>
-            </ul>
-          </div>
-
-          <div class="case-meta">
-            <p><strong>期間・工数:</strong> 4週間 / 約100時間</p>
-            <p><strong>使用技術:</strong> WordPress、PHP、MySQL、JavaScript</p>
+          <div class="mt-3 text-muted small">
+            <p class="mb-1"><strong>期間・工数:</strong> 4週間 / 約100時間</p>
+            <p class="mb-0"><strong>使用技術:</strong> WordPress、PHP、MySQL、JavaScript</p>
           </div>
         </div>
       </div>
 
-      <!-- Case 3 -->
-      <div class="case-item" id="case-booking-api">
-        <div class="case-header">
-          <h3>予約システムAPI連携</h3>
-          <div class="case-tags">
-            <span class="tag">API開発</span>
-            <span class="tag">PHP</span>
-            <span class="tag">自動化</span>
-          </div>
-        </div>
-        
-        <div class="case-content">
-          <div class="case-section">
-            <h4>💡 課題</h4>
-            <ul>
-              <li>予約システムと顧客管理システムが分離しており、手動でデータ転記</li>
-              <li>転記ミスが月5件程度発生し、顧客対応に時間がかかる</li>
-              <li>リアルタイムでの在庫確認ができない</li>
-              <li>月末の集計作業に丸1日かかっている</li>
-            </ul>
-          </div>
-
-          <div class="case-section">
-            <h4>🛠️ 実施した施策</h4>
-            <ul>
-              <li>予約システムのAPIを調査・仕様把握</li>
-              <li>顧客管理システムに API連携機能を追加</li>
-              <li>予約データの自動取り込み・同期（1時間ごと）</li>
-              <li>在庫数のリアルタイム表示機能</li>
-              <li>集計レポート自動生成機能</li>
-            </ul>
-          </div>
-
-          <div class="case-section">
-            <h4>📈 成果</h4>
-            <ul>
-              <li><strong>手動入力作業を完全自動化</strong></li>
-              <li><strong>転記ミス率ゼロ</strong></li>
-              <li><strong>在庫確認がリアルタイムに</strong></li>
-              <li><strong>月末集計作業が1日 → 5分に</strong></li>
-            </ul>
-          </div>
-
-          <div class="case-meta">
-            <p><strong>期間・工数:</strong> 2週間 / 約60時間</p>
-            <p><strong>使用技術:</strong> PHP、REST API、JSON、MySQL、Cron</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Development Process -->
-  <section class="section process-section">
-    <div class="container">
-      <h2 class="section-title">開発の進め方</h2>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <h3>要件整理・ヒアリング</h3>
-          <p>現状の課題、実現したいこと、予算・納期などを丁寧にヒアリング。要件が不明確でも一緒に整理します。</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <h3>提案・見積</h3>
-          <p>最適な実装方針を提案し、工数と料金を明示。複数のプラン提示も可能です。</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <h3>開発・実装</h3>
-          <p>定期的な進捗共有（週1回程度）とレビュー。柔軟に調整しながら進めます。</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <h3>テスト・納品</h3>
-          <p>動作確認、ドキュメント整備後に納品。運用開始後のサポートも対応可能です。</p>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section class="section pricing-section">
+  <section class="py-5">
     <div class="container">
-      <h2 class="section-title">料金・保守の目安</h2>
-      
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>時給ベース</h3>
-          <div class="price">¥6,000〜8,000/時間</div>
-          <ul class="pricing-features">
-            <li>小規模な改修・機能追加</li>
-            <li>スポット対応</li>
-            <li>作業時間が読みにくい案件</li>
-          </ul>
-          <p class="pricing-note">最低稼働: 月10時間〜</p>
-        </div>
-
-        <div class="pricing-card">
-          <h3>プロジェクトベース</h3>
-          <div class="price">¥250,000〜/案件</div>
-          <ul class="pricing-features">
-            <li>新規システム開発</li>
-            <li>要件定義から納品まで</li>
-            <li>予算を明確にしたい</li>
-          </ul>
-          <p class="pricing-note">内容により個別お見積もり</p>
-        </div>
-
-        <div class="pricing-card">
-          <h3>月額保守</h3>
-          <div class="price">¥100,000〜/月</div>
-          <ul class="pricing-features">
-            <li>継続的な改善・保守</li>
-            <li>優先対応</li>
-            <li>定期的な改善提案</li>
-          </ul>
-          <p class="pricing-note">稼働時間: 月20時間程度</p>
-        </div>
-      </div>
-
-      <div class="pricing-examples">
-        <h3>料金例</h3>
-        <div class="example-grid">
-          <div class="example-item">
-            <h4>既存システム改修</h4>
-            <p class="example-scope">機能追加、バグ修正、パフォーマンス改善</p>
-            <p class="example-price">¥150,000〜300,000</p>
-            <p class="example-time">期間: 2〜3週間</p>
-          </div>
-          <div class="example-item">
-            <h4>管理画面構築</h4>
-            <p class="example-scope">CRUD機能、検索、CSV出力</p>
-            <p class="example-price">¥250,000〜400,000</p>
-            <p class="example-time">期間: 3〜4週間</p>
-          </div>
-          <div class="example-item">
-            <h4>API開発・連携</h4>
-            <p class="example-scope">外部APIとの連携、データ同期</p>
-            <p class="example-price">¥200,000〜350,000</p>
-            <p class="example-time">期間: 2〜3週間</p>
+      <h2 class="text-center mb-5">料金・保守の目安</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">時給ベース</h3>
+              <p class="display-6 text-primary fw-bold">¥6,000〜8,000<small class="fs-6 text-muted">/時間</small></p>
+              <ul class="list-unstyled text-start mb-3">
+                <li class="mb-2">✓ 小規模な改修・機能追加</li>
+                <li class="mb-2">✓ スポット対応</li>
+                <li class="mb-2">✓ 作業時間が読みにくい案件</li>
+              </ul>
+              <p class="text-muted small">最低稼働: 月10時間〜</p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="support-info">
-        <h3>保守サポートについて</h3>
-        <ul>
-          <li>納品後1ヶ月間は不具合対応を無償で実施</li>
-          <li>営業時間: 平日10:00-18:00（土日祝は要相談）</li>
-          <li>連絡手段: メール、Slack、チャットツール等</li>
-          <li>緊急対応: 別途ご相談（追加料金が発生する場合あり）</li>
-        </ul>
+        <div class="col-md-4">
+          <div class="card h-100 text-center border-primary">
+            <div class="card-body">
+              <h3 class="h5 card-title">プロジェクトベース</h3>
+              <p class="display-6 text-primary fw-bold">¥250,000〜<small class="fs-6 text-muted">/案件</small></p>
+              <ul class="list-unstyled text-start mb-3">
+                <li class="mb-2">✓ 新規システム開発</li>
+                <li class="mb-2">✓ 要件定義から納品まで</li>
+                <li class="mb-2">✓ 予算を明確にしたい</li>
+              </ul>
+              <p class="text-muted small">内容により個別お見積もり</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">月額保守</h3>
+              <p class="display-6 text-primary fw-bold">¥100,000〜<small class="fs-6 text-muted">/月</small></p>
+              <ul class="list-unstyled text-start mb-3">
+                <li class="mb-2">✓ 継続的な改善・保守</li>
+                <li class="mb-2">✓ 優先対応</li>
+                <li class="mb-2">✓ 定期的な改善提案</li>
+              </ul>
+              <p class="text-muted small">稼働時間: 月20時間程度</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>システム開発サービス</h2>
-      <p>PHPシステム開発のサービスを提供しています。</p>
-    </div>
-  </section>
 </BaseLayout>
-
-<style>
-  /* Hero Section - Tech Landing Page Style */
-  .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    color: white;
-    padding: 5rem 0 4rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-    top: -250px;
-    right: -250px;
-    animation: rotate 20s linear infinite;
-  }
-
-  .hero::after {
-    content: '</>';
-    position: absolute;
-    font-size: 20rem;
-    opacity: 0.08;
-    top: -5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: 900;
-    font-family: monospace;
-  }
-
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  .hero-tag {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    padding: 0.5rem 1.5rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: var(--spacing-sm);
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  }
-
-  .hero-title {
-    font-size: 3.5rem;
-    margin-bottom: var(--spacing-sm);
-    font-weight: 900;
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem;
-    opacity: 0.95;
-    font-weight: 500;
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Target & Scope - Modern Card Grid */
-  .service-overview,
-  .scope-section {
-    background: linear-gradient(to bottom, #f8f9ff 0%, #f0f4ff 100%);
-    position: relative;
-  }
-
-  .service-overview::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(to right, #667eea, #764ba2, #f093fb);
-  }
-
-  .target-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .target-item {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
-    text-align: center;
-    border: 3px solid #e0e7ff;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .target-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(to right, #667eea, #764ba2);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-
-  .target-item:hover::before {
-    transform: scaleX(1);
-  }
-
-  .target-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25);
-    border-color: #667eea;
-  }
-
-  .target-icon {
-    font-size: 4rem;
-    margin-bottom: var(--spacing-sm);
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
-  }
-
-  .target-item h3 {
-    margin-bottom: var(--spacing-xs);
-    font-size: 1.25rem;
-    color: #5b21b6;
-    font-weight: 700;
-  }
-
-  .target-item p {
-    color: var(--text-gray);
-    margin-bottom: 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .scope-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .scope-category {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
-    border: 3px solid #e0e7ff;
-    transition: all 0.3s ease;
-  }
-
-  .scope-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-    border-color: #c7d2fe;
-  }
-
-  .scope-category h3 {
-    margin-bottom: var(--spacing-md);
-    color: #5b21b6;
-    font-weight: 800;
-    font-size: 1.375rem;
-  }
-
-  .scope-category ul {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-  }
-
-  .scope-category li {
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-    padding-left: 1.75rem;
-    position: relative;
-    font-weight: 500;
-  }
-
-  .scope-category li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: #667eea;
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-
-  /* Case Studies - Detailed Cards */
-  .case-studies {
-    background: white;
-  }
-
-  .case-item {
-    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
-    padding: var(--spacing-xl);
-    border-radius: 1.5rem;
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-    margin-bottom: var(--spacing-xl);
-    border: 4px solid #e0e7ff;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .case-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 100%;
-    background: linear-gradient(to bottom, #667eea, #764ba2);
-  }
-
-  .case-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
-    border-color: #c7d2fe;
-  }
-
-  .case-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .case-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: var(--spacing-lg);
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-  }
-
-  .case-header h3 {
-    margin-bottom: 0;
-    color: #5b21b6;
-    font-weight: 900;
-    font-size: 1.75rem;
-  }
-
-  .case-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-  }
-
-  .tag {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 0.5rem 1.25rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    transition: all 0.3s ease;
-  }
-
-  .tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-  }
-
-  .case-content {
-    display: grid;
-    gap: var(--spacing-lg);
-  }
-
-  .case-section {
-    background: white;
-    padding: var(--spacing-md);
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.08);
-  }
-
-  .case-section h4 {
-    margin-bottom: var(--spacing-md);
-    color: #5b21b6;
-    font-weight: 800;
-    font-size: 1.125rem;
-  }
-
-  .case-section ul {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-  }
-
-  .case-section li {
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.7;
-    padding-left: 1.75rem;
-    position: relative;
-    font-weight: 500;
-  }
-
-  .case-section li::before {
-    content: '●';
-    position: absolute;
-    left: 0;
-    color: #667eea;
-    font-size: 0.75rem;
-  }
-
-  .case-section strong {
-    color: #667eea;
-    font-weight: 700;
-    background: linear-gradient(to right, #e0e7ff, transparent);
-    padding: 0.1rem 0.3rem;
-    border-radius: 0.25rem;
-  }
-
-  .case-meta {
-    background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 100%);
-    padding: var(--spacing-md);
-    border-radius: 0.75rem;
-    border-left: 6px solid #667eea;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
-  }
-
-  .case-meta p {
-    margin-bottom: var(--spacing-xs);
-    color: var(--text-dark);
-    font-weight: 600;
-  }
-
-  .case-meta p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Process - Timeline Style */
-  .process-section {
-    background: linear-gradient(to bottom, #f8f9ff 0%, #f0f4ff 100%);
-  }
-
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-    position: relative;
-  }
-
-  .process-step {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
-    text-align: center;
-    border: 3px solid #e0e7ff;
-    transition: all 0.3s ease;
-  }
-
-  .process-step:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(102, 126, 234, 0.25);
-    border-color: #667eea;
-  }
-
-  .step-number {
-    width: 4.5rem;
-    height: 4.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 900;
-    margin: 0 auto var(--spacing-md);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-    border: 4px solid white;
-  }
-
-  .process-step h3 {
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.25rem;
-    color: #5b21b6;
-    font-weight: 800;
-  }
-
-  .process-step p {
-    color: var(--text-gray);
-    font-size: 0.95rem;
-    margin-bottom: 0;
-    line-height: 1.6;
-  }
-
-  /* Pricing - Modern Tech Cards */
-  .pricing-section {
-    background: white;
-  }
-
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .pricing-card {
-    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
-    padding: var(--spacing-xl);
-    border-radius: 1.5rem;
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-    text-align: center;
-    border: 4px solid #e0e7ff;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pricing-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(to right, #667eea, #764ba2);
-  }
-
-  .pricing-card:hover {
-    transform: translateY(-10px) scale(1.03); /* Subtle scale for professional feel */
-    box-shadow: 0 25px 60px rgba(102, 126, 234, 0.3);
-    border-color: #667eea;
-  }
-
-  .pricing-card h3 {
-    margin-bottom: var(--spacing-md);
-    color: #5b21b6;
-    font-weight: 900;
-    font-size: 1.5rem;
-  }
-
-  .price {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #667eea;
-    margin-bottom: var(--spacing-md);
-    text-shadow: 1px 2px 4px rgba(102, 126, 234, 0.2);
-  }
-
-  .pricing-features {
-    list-style: none;
-    padding: 0;
-    margin-bottom: var(--spacing-md);
-    text-align: left;
-  }
-
-  .pricing-features li {
-    padding: var(--spacing-sm) 0;
-    color: var(--text-dark);
-    position: relative;
-    padding-left: 2rem;
-    font-weight: 500;
-    font-size: 0.95rem;
-  }
-
-  .pricing-features li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #667eea;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-
-  .pricing-note {
-    color: white;
-    font-size: 0.875rem;
-    margin-bottom: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 2rem;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  }
-
-  .pricing-examples {
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .pricing-examples h3 {
-    margin-bottom: var(--spacing-lg);
-    color: #5b21b6;
-    font-weight: 900;
-    font-size: 1.75rem;
-    text-align: center;
-  }
-
-  .example-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .example-item {
-    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
-    padding: var(--spacing-lg);
-    border-radius: 1.25rem;
-    border: 3px solid #e0e7ff;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.12);
-  }
-
-  .example-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.2);
-    border-color: #c7d2fe;
-  }
-
-  .example-item h4 {
-    margin-bottom: var(--spacing-sm);
-    color: #5b21b6;
-    font-weight: 800;
-  }
-
-  .example-scope {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.6;
-  }
-
-  .example-price {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #667eea;
-    margin-bottom: var(--spacing-xs);
-  }
-
-  .example-time {
-    color: var(--text-gray);
-    font-size: 0.875rem;
-    margin-bottom: 0;
-    font-weight: 600;
-  }
-
-  .support-info {
-    background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 100%);
-    padding: var(--spacing-lg);
-    border-radius: 1.25rem;
-    border-left: 6px solid #667eea;
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
-  }
-
-  .support-info h3 {
-    margin-bottom: var(--spacing-md);
-    color: #5b21b6;
-    font-weight: 900;
-  }
-
-  .support-info ul {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-  }
-
-  .support-info li {
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-    padding-left: 1.75rem;
-    position: relative;
-    font-weight: 500;
-  }
-
-  .support-info li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: #667eea;
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-
-  /* CTA Section - Tech Style */
-  .cta-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    color: white;
-    text-align: center;
-    padding: 5rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-    top: -200px;
-    left: -200px;
-    animation: rotate 15s linear infinite;
-  }
-
-  .cta-section::after {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-    bottom: -200px;
-    right: -200px;
-    animation: rotate 20s linear infinite reverse;
-  }
-
-  .cta-section h2 {
-    margin-bottom: var(--spacing-sm);
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 1;
-  }
-
-  .cta-section p {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-md);
-    opacity: 0.95;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2.25rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.125rem;
-    }
-
-    .hero::after {
-      font-size: 10rem;
-    }
-
-    .target-grid,
-    .scope-grid,
-    .process-steps,
-    .pricing-grid,
-    .example-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .case-header {
-      flex-direction: column;
-    }
-  }
-</style>
