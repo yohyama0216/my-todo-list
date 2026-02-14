@@ -1,145 +1,266 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout 
-  title="クロスワードパズル制作 | サービス"
-  description="オリジナルのクロスワードパズルを制作します。雑誌、イベント、教育用など、様々な用途に対応いたします。"
+  title="オリジナルクロスワードパズル制作サービス｜テーマ・難易度自由に対応"
+  description="雑誌・教材・イベント向けのオリジナルクロスワードパズルを制作。テーマ、難易度、サイズをカスタマイズ可能。PDF・画像・Web形式で納品。見積もり無料。"
 >
   <!-- Hero Section -->
   <section class="bg-warning bg-gradient text-dark py-5">
-    <div class="container text-center">
-      <span class="badge bg-light text-dark mb-3">Crossword Puzzle</span>
-      <h1 class="display-4 fw-bold">クロスワードパズル制作</h1>
-      <p class="lead">オリジナルのクロスワードパズルを制作します</p>
-    </div>
-  </section>
-
-  <!-- Service Overview -->
-  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-5">こんな方におすすめ</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body text-center">
-              <div class="fs-1 mb-3">📰</div>
-              <h3 class="h5 card-title">雑誌・新聞社</h3>
-              <p class="card-text text-muted">読者向けの定期連載コンテンツとして</p>
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge bg-light text-dark mb-3 fs-6">オリジナルコンテンツ制作</span>
+          <h1 class="display-4 fw-bold mb-4">テーマ・難易度自由<br>オリジナルクロスワード制作</h1>
+          <p class="lead mb-4">雑誌・教材・イベントに最適なクロスワードパズルを、あなたの目的に合わせて制作します。テーマ・難易度・サイズを自由にカスタマイズ。PDF・画像・Web形式で納品可能。</p>
+          
+          <!-- ベネフィット -->
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-2">
+              <span class="me-2 text-success fs-5">✓</span>
+              <span><strong>完全オリジナル：</strong>ご指定のテーマ・用語で制作</span>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+              <span class="me-2 text-success fs-5">✓</span>
+              <span><strong>柔軟な納品形式：</strong>PDF・画像・Web形式に対応</span>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+              <span class="me-2 text-success fs-5">✓</span>
+              <span><strong>短納期対応：</strong>最短1週間〜納品可能</span>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body text-center">
-              <div class="fs-1 mb-3">🎉</div>
-              <h3 class="h5 card-title">イベント主催者</h3>
-              <p class="card-text text-muted">参加者向けの景品付きクイズ企画として</p>
-            </div>
+          
+          <!-- CTAボタン -->
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-dark btn-lg px-4 py-3">
+              <i class="bi bi-chat-dots me-2"></i>無料で相談する
+            </a>
+            <a href="#pricing" class="btn btn-outline-dark btn-lg px-4 py-3">
+              料金プランを見る
+            </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body text-center">
-              <div class="fs-1 mb-3">🏫</div>
-              <h3 class="h5 card-title">教育機関</h3>
-              <p class="card-text text-muted">学習教材や脳トレコンテンツとして</p>
-            </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <div class="bg-white p-3 rounded shadow">
+            <img src={`${base}/images/samples/crossword-sample-1.svg`} alt="クロスワードサンプル" class="img-fluid rounded">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Details -->
-  <section class="py-5">
+  <!-- Samples Section -->
+  <section class="py-5 bg-white">
     <div class="container">
-      <h2 class="text-center mb-5">サービス内容</h2>
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">制作サンプル</h2>
+        <p class="lead text-muted">実際の完成イメージをご確認ください</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <img src={`${base}/images/samples/crossword-sample-1.svg`} alt="地域情報誌向けサンプル" class="img-fluid rounded" style="max-height: 400px;">
+              </div>
+              <h3 class="h5 card-title">地域情報誌向けクロスワード</h3>
+              <div class="text-muted small">
+                <p class="mb-1"><strong>用途：</strong>月刊誌の読者参加コーナー</p>
+                <p class="mb-1"><strong>サイズ：</strong>10×10マス（中級レベル）</p>
+                <p class="mb-1"><strong>テーマ：</strong>地域の名所・特産品</p>
+                <p class="mb-1"><strong>納品形式：</strong>PDF + 画像（PNG）</p>
+                <p class="mt-2 mb-0"><small class="text-info">※こちらはサンプル制作例です</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <img src={`${base}/images/samples/crossword-sample-2.svg`} alt="教育用英語クロスワード" class="img-fluid rounded" style="max-height: 400px;">
+              </div>
+              <h3 class="h5 card-title">教育用英語クロスワード</h3>
+              <div class="text-muted small">
+                <p class="mb-1"><strong>用途：</strong>中学生向け英語教材</p>
+                <p class="mb-1"><strong>サイズ：</strong>7×7マス（初級レベル）</p>
+                <p class="mb-1"><strong>テーマ：</strong>基本単語・文法</p>
+                <p class="mb-1"><strong>納品形式：</strong>PDF + 解答付き</p>
+                <p class="mt-2 mb-0"><small class="text-info">※こちらはサンプル制作例です</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mini CTA -->
+      <div class="text-center mt-5">
+        <p class="mb-3 text-muted">あなたのテーマでもサンプルを制作できます</p>
+        <a href="#contact" class="btn btn-warning btn-lg px-5">サンプル制作を相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">こんな用途で活用されています</h2>
+        <p class="lead text-muted">さまざまな業種・目的に対応できます</p>
+      </div>
       
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="h5 card-title">🎯 カスタマイズ可能</h3>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+              <div class="fs-1 mb-3">🏫</div>
+              <h3 class="h4 card-title mb-3">学習塾・教育機関</h3>
+              <p class="card-text text-muted mb-3">生徒の語彙力向上、学習意欲アップに最適</p>
+              <ul class="list-unstyled text-start small text-muted">
+                <li class="mb-2">✓ 英単語・漢字の学習教材</li>
+                <li class="mb-2">✓ 理科・社会の復習問題</li>
+                <li class="mb-2">✓ 受験対策の息抜きコンテンツ</li>
+                <li class="mb-2">✓ 夏期・冬期講習の特別教材</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+              <div class="fs-1 mb-3">🎉</div>
+              <h3 class="h4 card-title mb-3">店舗・イベント主催者</h3>
+              <p class="card-text text-muted mb-3">参加者を楽しませ、滞在時間を延ばす仕掛けに</p>
+              <ul class="list-unstyled text-start small text-muted">
+                <li class="mb-2">✓ 周年記念イベントの参加型企画</li>
+                <li class="mb-2">✓ 商品・サービス名を織り込んだPR</li>
+                <li class="mb-2">✓ 景品付きクイズキャンペーン</li>
+                <li class="mb-2">✓ 待ち時間の退屈防止ツール</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+              <div class="fs-1 mb-3">📰</div>
+              <h3 class="h4 card-title mb-3">雑誌・Webメディア</h3>
+              <p class="card-text text-muted mb-3">読者の滞在時間UP、リピート率向上に貢献</p>
+              <ul class="list-unstyled text-start small text-muted">
+                <li class="mb-2">✓ 月刊誌の読者コーナー連載</li>
+                <li class="mb-2">✓ Webサイトの回遊率向上施策</li>
+                <li class="mb-2">✓ 高齢者向け脳トレコンテンツ</li>
+                <li class="mb-2">✓ 季節・トレンドに合わせた企画</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mini CTA -->
+      <div class="text-center mt-5">
+        <p class="mb-3">あなたの業種・目的に合わせたカスタマイズが可能です</p>
+        <a href="#contact" class="btn btn-warning btn-lg px-5">用途を相談してみる</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Features -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">カスタマイズ可能な制作項目</h2>
+        <p class="lead text-muted">あなたのニーズに合わせて柔軟に対応します</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 bg-light">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">🎯 テーマ・内容</h3>
               <ul class="list-unstyled">
-                <li class="mb-2">✓ テーマに合わせた問題作成</li>
+                <li class="mb-2">✓ 指定テーマに沿った問題作成</li>
+                <li class="mb-2">✓ 専門用語・業界用語に対応</li>
                 <li class="mb-2">✓ 難易度調整（初級〜上級）</li>
-                <li class="mb-2">✓ サイズ指定（5×5〜15×15マスなど）</li>
-                <li class="mb-2">✓ ヒント数の調整</li>
+                <li class="mb-2">✓ ターゲット層に合わせた調整</li>
+                <li class="mb-2">✓ 季節・イベントに合わせた内容</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="h5 card-title">📋 対応形式</h3>
+          <div class="card h-100 border-0 bg-light">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">📐 サイズ・構成</h3>
               <ul class="list-unstyled">
-                <li class="mb-2">✓ PDF（印刷用）</li>
+                <li class="mb-2">✓ 5×5マス〜15×15マス対応</li>
+                <li class="mb-2">✓ カスタムサイズも相談可</li>
+                <li class="mb-2">✓ ヒント数の調整</li>
+                <li class="mb-2">✓ 黒マス配置の最適化</li>
+                <li class="mb-2">✓ 問題数のボリューム調整</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 bg-light">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">📋 納品形式</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2">✓ PDF（印刷用・高解像度）</li>
                 <li class="mb-2">✓ 画像ファイル（PNG、JPEG）</li>
                 <li class="mb-2">✓ Web用HTML/CSS</li>
-                <li class="mb-2">✓ 解答付き納品</li>
+                <li class="mb-2">✓ 解答・解説付き</li>
+                <li class="mb-2">✓ 編集可能データ（オプション）</li>
               </ul>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="h5 card-title">💡 用途例</h3>
-              <ul class="list-unstyled">
-                <li class="mb-2">✓ 雑誌・新聞の読者コーナー</li>
-                <li class="mb-2">✓ 企業イベントの景品企画</li>
-                <li class="mb-2">✓ 学校の教材・宿題</li>
-                <li class="mb-2">✓ 高齢者向け脳トレコンテンツ</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      </div>
+      
+      <!-- Mini CTA -->
+      <div class="text-center mt-5">
+        <p class="mb-3 text-muted">その他のカスタマイズもお気軽にご相談ください</p>
+        <a href="#contact" class="btn btn-outline-dark btn-lg px-5">カスタマイズを相談する</a>
       </div>
     </div>
   </section>
 
   <!-- Works -->
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-white">
     <div class="container">
-      <h2 class="text-center mb-5">制作実績</h2>
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">制作実績</h2>
+        <p class="lead text-muted">これまでの制作事例をご紹介します</p>
+      </div>
       
       <div class="row g-4">
         <div class="col-md-12">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="h5 card-title">地域情報誌向けクロスワード</h3>
-              <div class="row text-muted small">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">地域情報誌向けクロスワード</h3>
+              <div class="row">
                 <div class="col-md-6">
-                  <p class="mb-1"><strong>用途:</strong> 月刊誌の読者コーナー</p>
-                  <p class="mb-1"><strong>テーマ:</strong> 地域の名所・特産品</p>
-                  <p class="mb-1"><strong>サイズ:</strong> 10×10マス</p>
-                  <p class="mb-1"><strong>難易度:</strong> 中級（一般読者向け）</p>
+                  <p class="mb-2 small"><strong>用途：</strong>月刊誌の読者参加コーナー</p>
+                  <p class="mb-2 small"><strong>テーマ：</strong>地域の名所・特産品</p>
+                  <p class="mb-2 small"><strong>サイズ：</strong>10×10マス</p>
+                  <p class="mb-2 small"><strong>難易度：</strong>中級（一般読者向け）</p>
+                  <p class="mb-2 small"><strong>納品形式：</strong>PDF + 画像（PNG）</p>
+                  <p class="mb-0 small"><strong>制作期間：</strong>約2週間（修正2回含む）</p>
                 </div>
                 <div class="col-md-6">
-                  <p class="mb-0"><strong>工夫:</strong> 地域にゆかりのある言葉を中心に構成し、読者の地域愛を刺激。応募総数が前回比130%増加。</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="h5 card-title">企業イベント用オリジナルパズル</h3>
-              <div class="row text-muted small">
-                <div class="col-md-6">
-                  <p class="mb-1"><strong>用途:</strong> 周年記念イベント</p>
-                  <p class="mb-1"><strong>テーマ:</strong> 企業の歴史・製品名</p>
-                  <p class="mb-1"><strong>サイズ:</strong> 8×8マス</p>
-                  <p class="mb-1"><strong>難易度:</strong> 初級〜中級</p>
-                </div>
-                <div class="col-md-6">
-                  <p class="mb-0"><strong>工夫:</strong> 企業理念や製品名を織り込み、ブランディングにも貢献。参加者の満足度が高評価。</p>
+                  <p class="mb-2 text-muted small"><strong>お客様の声：</strong></p>
+                  <p class="mb-0 text-muted small">地域にゆかりのある言葉を中心に構成いただき、読者からの反響が増えたというフィードバックをいただきました。継続的にご依頼いただいています。</p>
                 </div>
               </div>
             </div>
@@ -147,116 +268,422 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="col-md-12">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="h5 card-title">教育用英語クロスワード</h3>
-              <div class="row text-muted small">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">企業イベント用オリジナルパズル</h3>
+              <div class="row">
                 <div class="col-md-6">
-                  <p class="mb-1"><strong>用途:</strong> 中学生向け英語教材</p>
-                  <p class="mb-1"><strong>テーマ:</strong> 基本単語・文法</p>
-                  <p class="mb-1"><strong>サイズ:</strong> 7×7マス</p>
-                  <p class="mb-1"><strong>難易度:</strong> 初級</p>
+                  <p class="mb-2 small"><strong>用途：</strong>周年記念イベント</p>
+                  <p class="mb-2 small"><strong>テーマ：</strong>企業の歴史・製品名</p>
+                  <p class="mb-2 small"><strong>サイズ：</strong>8×8マス</p>
+                  <p class="mb-2 small"><strong>難易度：</strong>初級〜中級</p>
+                  <p class="mb-2 small"><strong>納品形式：</strong>PDF + Web用HTML</p>
+                  <p class="mb-0 small"><strong>制作期間：</strong>約10日（修正1回含む）</p>
                 </div>
                 <div class="col-md-6">
-                  <p class="mb-0"><strong>工夫:</strong> 学習指導要領に沿った単語を使用。生徒の語彙学習をゲーム感覚で促進。</p>
+                  <p class="mb-2 text-muted small"><strong>お客様の声：</strong></p>
+                  <p class="mb-0 text-muted small">企業理念や製品名を織り込んでいただき、ブランディングにも貢献。参加者から高評価をいただきました。</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col-md-12">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">教育用英語クロスワード</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="mb-2 small"><strong>用途：</strong>中学生向け英語教材</p>
+                  <p class="mb-2 small"><strong>テーマ：</strong>基本単語・文法</p>
+                  <p class="mb-2 small"><strong>サイズ：</strong>7×7マス</p>
+                  <p class="mb-2 small"><strong>難易度：</strong>初級</p>
+                  <p class="mb-2 small"><strong>納品形式：</strong>PDF（解答・解説付き）</p>
+                  <p class="mb-0 small"><strong>制作期間：</strong>約1週間</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="mb-2 text-muted small"><strong>お客様の声：</strong></p>
+                  <p class="mb-0 text-muted small">学習指導要領に沿った単語を使用いただき、生徒の語彙学習をゲーム感覚で促進できました。定期的に新しいテーマでご依頼しています。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mini CTA -->
+      <div class="text-center mt-5">
+        <p class="mb-3 text-muted">あなたの用途に合わせた制作も可能です</p>
+        <a href="#contact" class="btn btn-warning btn-lg px-5">制作事例を相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Production Process -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">制作の流れ</h2>
+        <p class="lead text-muted">ご依頼から納品までをスムーズにサポートします</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="badge bg-warning text-dark rounded-circle p-3 fs-3 mb-3">1</div>
+              <h3 class="h5 mb-3">お問い合わせ・ヒアリング</h3>
+              <p class="small text-muted mb-0">用途、テーマ、難易度、サイズ、納期などをお伺いします。ご予算に合わせたプランをご提案いたします。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="badge bg-warning text-dark rounded-circle p-3 fs-3 mb-3">2</div>
+              <h3 class="h5 mb-3">お見積もり・ご発注</h3>
+              <p class="small text-muted mb-0">詳細な見積書を提出。内容にご納得いただけましたら正式発注となります。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="badge bg-warning text-dark rounded-circle p-3 fs-3 mb-3">3</div>
+              <h3 class="h5 mb-3">制作・初稿提出</h3>
+              <p class="small text-muted mb-0">問題とヒントを作成し、初稿を提出。内容をご確認いただき、修正箇所があればお伝えください。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="badge bg-warning text-dark rounded-circle p-3 fs-3 mb-3">4</div>
+              <h3 class="h5 mb-3">修正・納品</h3>
+              <p class="small text-muted mb-0">ご指摘箇所を修正し、最終版を納品。指定形式（PDF、画像、Webなど）でお渡しします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card mt-5 border-0 bg-white shadow-sm">
+        <div class="card-body p-4">
+          <h4 class="h5 mb-3">💡 ご依頼時にお伝えいただきたい情報</h4>
+          <ul class="row row-cols-1 row-cols-md-2 g-2 mb-0">
+            <li class="col">✓ 使用目的・用途（雑誌、教材、イベントなど）</li>
+            <li class="col">✓ ターゲット層（年齢、属性など）</li>
+            <li class="col">✓ テーマ・ジャンル</li>
+            <li class="col">✓ 希望サイズ（マス数）</li>
+            <li class="col">✓ 希望難易度（初級、中級、上級）</li>
+            <li class="col">✓ 希望納品形式（PDF、画像、Webなど）</li>
+            <li class="col">✓ 納期（○月○日までなど）</li>
+            <li class="col">✓ ご予算</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Mini CTA -->
+      <div class="text-center mt-5">
+        <a href="#contact" class="btn btn-warning btn-lg px-5">制作を依頼する</a>
       </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section class="py-5">
+  <section class="py-5 bg-light" id="pricing">
     <div class="container">
-      <h2 class="text-center mb-5">料金・納期の目安</h2>
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">料金プラン</h2>
+        <p class="lead text-muted">明確な料金体系で安心してご依頼いただけます</p>
+      </div>
       
-      <div class="row g-4">
+      <div class="row g-4 mb-5">
         <div class="col-md-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-              <h3 class="h5 card-title">基本プラン</h3>
-              <p class="display-6 text-warning fw-bold">¥12,000〜</p>
-              <ul class="list-unstyled text-start mb-3">
-                <li class="mb-2">✓ 5×5〜10×10マス</li>
-                <li class="mb-2">✓ テーマ指定可能</li>
-                <li class="mb-2">✓ PDF + 画像納品</li>
-                <li class="mb-2">✓ 解答付き</li>
-              </ul>
-              <p class="text-muted small">納期: 1週間〜</p>
+          <div class="card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">基本プラン</h3>
+              <div class="mb-3">
+                <span class="display-5 fw-bold text-warning">¥12,000</span>
+                <span class="text-muted">〜</span>
+              </div>
+              <p class="text-muted small mb-4">小規模〜中規模のパズルに最適</p>
+              
+              <div class="mb-4">
+                <p class="fw-bold mb-2">含まれるもの：</p>
+                <ul class="list-unstyled small">
+                  <li class="mb-2">✓ <strong>サイズ：</strong>5×5〜10×10マス</li>
+                  <li class="mb-2">✓ <strong>問題数：</strong>15〜30問程度</li>
+                  <li class="mb-2">✓ <strong>納品形式：</strong>PDF + 画像（PNG）</li>
+                  <li class="mb-2">✓ <strong>修正：</strong>2回まで無料</li>
+                  <li class="mb-2">✓ <strong>初稿納期：</strong>1週間〜</li>
+                  <li class="mb-2">✓ 解答・ヒント付き</li>
+                  <li class="mb-2">✓ テーマ指定可能</li>
+                </ul>
+              </div>
+              
+              <a href="#contact" class="btn btn-outline-warning w-100">このプランで相談する</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card h-100 text-center border-warning">
-            <div class="card-body">
-              <h3 class="h5 card-title">大型パズル</h3>
-              <p class="display-6 text-warning fw-bold">¥20,000〜</p>
-              <ul class="list-unstyled text-start mb-3">
-                <li class="mb-2">✓ 11×11マス以上</li>
-                <li class="mb-2">✓ 複雑な構成</li>
-                <li class="mb-2">✓ PDF + 画像 + Web用</li>
-                <li class="mb-2">✓ 解答・解説付き</li>
-              </ul>
-              <p class="text-muted small">納期: 2週間〜</p>
+          <div class="card h-100 shadow border-warning border-3 position-relative">
+            <div class="position-absolute top-0 start-50 translate-middle">
+              <span class="badge bg-warning text-dark px-4 py-2">おすすめ</span>
+            </div>
+            <div class="card-body p-4 pt-5">
+              <h3 class="h5 card-title mb-3">大型パズルプラン</h3>
+              <div class="mb-3">
+                <span class="display-5 fw-bold text-warning">¥20,000</span>
+                <span class="text-muted">〜</span>
+              </div>
+              <p class="text-muted small mb-4">本格的なパズル制作に</p>
+              
+              <div class="mb-4">
+                <p class="fw-bold mb-2">含まれるもの：</p>
+                <ul class="list-unstyled small">
+                  <li class="mb-2">✓ <strong>サイズ：</strong>11×11マス以上</li>
+                  <li class="mb-2">✓ <strong>問題数：</strong>30〜60問程度</li>
+                  <li class="mb-2">✓ <strong>納品形式：</strong>PDF + 画像 + Web用</li>
+                  <li class="mb-2">✓ <strong>修正：</strong>3回まで無料</li>
+                  <li class="mb-2">✓ <strong>初稿納期：</strong>2週間〜</li>
+                  <li class="mb-2">✓ 解答・解説付き</li>
+                  <li class="mb-2">✓ 複雑な構成対応</li>
+                  <li class="mb-2">✓ 専門用語対応</li>
+                </ul>
+              </div>
+              
+              <a href="#contact" class="btn btn-warning w-100">このプランで相談する</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-              <h3 class="h5 card-title">定期制作</h3>
-              <p class="display-6 text-warning fw-bold">¥8,000〜<small class="fs-6 text-muted">/回</small></p>
-              <ul class="list-unstyled text-start mb-3">
-                <li class="mb-2">✓ 月刊連載向け</li>
-                <li class="mb-2">✓ まとめて発注で割引</li>
-                <li class="mb-2">✓ テーマの継続性確保</li>
-                <li class="mb-2">✓ 優先対応</li>
-              </ul>
-              <p class="text-muted small">月4回〜</p>
+          <div class="card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="h5 card-title mb-3">定期制作プラン</h3>
+              <div class="mb-3">
+                <span class="display-5 fw-bold text-warning">¥8,000</span>
+                <span class="text-muted">〜/回</span>
+              </div>
+              <p class="text-muted small mb-4">月刊連載など継続案件に</p>
+              
+              <div class="mb-4">
+                <p class="fw-bold mb-2">含まれるもの：</p>
+                <ul class="list-unstyled small">
+                  <li class="mb-2">✓ <strong>サイズ：</strong>5×5〜10×10マス</li>
+                  <li class="mb-2">✓ <strong>問題数：</strong>15〜30問程度</li>
+                  <li class="mb-2">✓ <strong>納品形式：</strong>PDF + 画像</li>
+                  <li class="mb-2">✓ <strong>修正：</strong>2回まで無料</li>
+                  <li class="mb-2">✓ <strong>初稿納期：</strong>1週間〜</li>
+                  <li class="mb-2">✓ 月4回以上で割引適用</li>
+                  <li class="mb-2">✓ テーマの継続性確保</li>
+                  <li class="mb-2">✓ 優先対応</li>
+                </ul>
+              </div>
+              
+              <a href="#contact" class="btn btn-outline-warning w-100">このプランで相談する</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-5">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="h5">制作の流れ</h4>
-            <div class="row g-3 mt-3">
-              <div class="col-md-3">
-                <div class="text-center">
-                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">1</div>
-                  <h5 class="h6">ヒアリング</h5>
-                  <p class="small text-muted">用途・テーマ・難易度などを確認</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="text-center">
-                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">2</div>
-                  <h5 class="h6">パズル作成</h5>
-                  <p class="small text-muted">問題・ヒントを作成</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="text-center">
-                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">3</div>
-                  <h5 class="h6">確認・修正</h5>
-                  <p class="small text-muted">内容を確認いただき調整</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="text-center">
-                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">4</div>
-                  <h5 class="h6">納品</h5>
-                  <p class="small text-muted">指定形式で納品</p>
+      <!-- 比較表 -->
+      <div class="card shadow-sm mb-5">
+        <div class="card-body p-4">
+          <h4 class="h5 mb-4 text-center">プラン比較表</h4>
+          <div class="table-responsive">
+            <table class="table table-bordered mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>項目</th>
+                  <th class="text-center">基本プラン</th>
+                  <th class="text-center bg-warning bg-opacity-10">大型パズル</th>
+                  <th class="text-center">定期制作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>料金</td>
+                  <td class="text-center">¥12,000〜</td>
+                  <td class="text-center fw-bold">¥20,000〜</td>
+                  <td class="text-center">¥8,000〜/回</td>
+                </tr>
+                <tr>
+                  <td>サイズ</td>
+                  <td class="text-center">5×5〜10×10</td>
+                  <td class="text-center fw-bold">11×11以上</td>
+                  <td class="text-center">5×5〜10×10</td>
+                </tr>
+                <tr>
+                  <td>納品形式</td>
+                  <td class="text-center">PDF + 画像</td>
+                  <td class="text-center fw-bold">PDF + 画像 + Web</td>
+                  <td class="text-center">PDF + 画像</td>
+                </tr>
+                <tr>
+                  <td>修正回数</td>
+                  <td class="text-center">2回</td>
+                  <td class="text-center fw-bold">3回</td>
+                  <td class="text-center">2回</td>
+                </tr>
+                <tr>
+                  <td>初稿納期</td>
+                  <td class="text-center">1週間〜</td>
+                  <td class="text-center">2週間〜</td>
+                  <td class="text-center fw-bold">1週間〜（優先）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card bg-light border-0">
+        <div class="card-body p-4">
+          <h4 class="h5 mb-3">💡 料金についての補足</h4>
+          <ul class="mb-0 small">
+            <li class="mb-2">上記は基本料金の目安です。テーマの専門性、難易度、納期などにより変動する場合があります</li>
+            <li class="mb-2">お見積もりは無料です。まずはお気軽にご相談ください</li>
+            <li class="mb-2">定期制作プランは月4回以上のご依頼で割引が適用されます</li>
+            <li class="mb-2">お急ぎの場合は特急料金で対応可能です（別途ご相談）</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Mini CTA -->
+      <div class="text-center mt-5">
+        <p class="mb-3">プラン選びに迷ったらお気軽にご相談ください</p>
+        <a href="#contact" class="btn btn-warning btn-lg px-5">無料で見積もりをもらう</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">よくあるご質問</h2>
+        <p class="lead text-muted">お客様からよく寄せられる質問にお答えします</p>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  専門的なテーマでも制作できますか？
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  はい、可能です。医療、法律、ITなど専門的なテーマにも対応いたします。必要に応じて専門用語リストや参考資料をご提供いただければ、より正確な内容で制作できます。専門知識が必要な場合は、制作期間を少し長めにいただく場合がございます。
                 </div>
               </div>
             </div>
+
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  納品形式は途中で変更できますか？
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  はい、制作中でも納品形式の追加・変更は可能です。ただし、制作の進行状況によっては追加料金が発生する場合がございます。できるだけ早い段階でご相談いただければ、柔軟に対応させていただきます。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  著作権や利用範囲はどうなりますか？
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  納品後のクロスワードの著作権は、原則としてお客様に帰属します。商用利用、改変、再配布など、自由にご利用いただけます。ただし、第三者への再販売や、当方の制作物として表示することはご遠慮ください。詳細は契約時に明記いたします。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  見積もりに必要な情報は何ですか？
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  基本的には、<strong>①用途・目的、②テーマ、③希望サイズ（マス数）、④難易度、⑤納期、⑥納品形式</strong>をお伝えいただければ、お見積もりを作成できます。詳細が決まっていなくても、大まかな内容でご相談いただければ、複数プランをご提案いたします。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  修正は何回まで無料ですか？
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  プランによって異なりますが、基本プランで2回、大型パズルプランで3回まで無料で修正対応いたします。それ以降の修正は、内容に応じて追加料金をいただく場合がございます。大幅な方向転換が必要な場合は、事前にご相談ください。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  急ぎの依頼にも対応できますか？
+                </button>
+              </h3>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  はい、特急料金にて対応可能です。通常1週間程度の納期を、3〜5日程度に短縮できる場合があります。ただし、パズルのサイズや難易度、他の案件の状況によってはお受けできない場合もございますので、まずはご相談ください。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mini CTA -->
+      <div class="text-center mt-5">
+        <p class="mb-3 text-muted">その他のご質問もお気軽にお問い合わせください</p>
+        <a href="#contact" class="btn btn-outline-dark btn-lg px-5">質問する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="py-5 bg-warning bg-gradient" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="display-5 fw-bold mb-4">オリジナルクロスワード制作のご相談はこちら</h2>
+          <p class="lead mb-4">見積もりは無料です。まずはお気軽にご相談ください。<br>テーマや用途に合わせた最適なプランをご提案いたします。</p>
+          
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-4">
+            <a href="mailto:contact@example.com" class="btn btn-dark btn-lg px-5 py-3">
+              <i class="bi bi-envelope me-2"></i>メールで相談する
+            </a>
+            <a href={`${base}`} class="btn btn-outline-dark btn-lg px-5 py-3">
+              <i class="bi bi-arrow-left me-2"></i>トップページへ
+            </a>
+          </div>
+          
+          <div class="bg-white bg-opacity-75 p-4 rounded mt-4">
+            <p class="small mb-2"><strong>📧 メールアドレス：</strong> contact@example.com</p>
+            <p class="small mb-0"><strong>⏰ 営業時間：</strong> 平日 9:00〜18:00（土日祝休み）</p>
+            <p class="small text-muted mt-2 mb-0">※通常1営業日以内にご返信いたします</p>
           </div>
         </div>
       </div>
