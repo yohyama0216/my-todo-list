@@ -1,11 +1,11 @@
 # フリーランスポートフォリオサイト
 
-フリーランスのデザイン＆開発サービス向けの、実績と成果を重視したポートフォリオサイトです。
+フリーランスの開発サービス向けの、実績と成果を重視したポートフォリオサイトです。
 GitHub Pagesで公開し、問い合わせ獲得を目的としています。
 
 ## 🎯 サイトの特徴
 
-- **2つのサービスを明確に分離**: デザイン（チラシ・ポスター制作）とPHP開発を分けて提示
+- **サービスを明確に提示**: PHP開発とクロスワードパズル制作を提示
 - **発注者目線の設計**: それぞれのサービスに1クリックでアクセス可能
 - **高速・軽量**: Astro製で Core Web Vitals 最適化済み
 - **SEO対策済み**: メタタグ、OGP、sitemap、robots.txt完備
@@ -14,15 +14,10 @@ GitHub Pagesで公開し、問い合わせ獲得を目的としています。
 
 ## 📁 ページ構成
 
-- **Home (`/`)**: 2つのサービス入口を明確に提示
-  - デザイン（チラシ・ポスター制作）入口
+- **Home (`/`)**: サービス入口を明確に提示
   - 開発（PHPシステム開発）入口
+  - クロスワードパズル制作入口
   - 各サービスの代表実績プレビュー
-
-- **Design (`/design`)**: チラシ・ポスター制作サービス
-  - 制作実績ギャラリー（目的・ターゲット・成果）
-  - 料金・納期の目安
-  - 制作の流れ
 
 - **Development (`/dev`)**: PHPシステム開発サービス
   - ケーススタディ（課題→施策→成果）
@@ -30,20 +25,9 @@ GitHub Pagesで公開し、問い合わせ獲得を目的としています。
   - 開発の進め方
   - 料金・保守の目安
 
-- **Works (`/works`)**: 実績一覧（カテゴリフィルタ付き）
-  - デザイン実績
-  - 開発実績
-  - カテゴリ切り替え機能
-
-- **Pricing (`/pricing`)**: 料金体系
-  - デザイン料金
-  - 開発料金
-  - FAQ
-
-- **Contact (`/contact`)**: お問い合わせフォーム
-  - サービス種別選択（デザイン/開発/両方）
-  - 具体的な相談内容選択
-  - 必要情報の記入テンプレート
+- **Crossword (`/crossword`)**: クロスワードパズル制作サービス
+  - パズル制作実績
+  - 対応範囲・料金の目安
 
 ## 🚀 セットアップ
 
@@ -93,42 +77,13 @@ export default defineConfig({
 
 各ページは `src/pages/` ディレクトリにあります：
 
-- `index.astro` - ホームページ（デザイン・開発の2つの入口）
-- `design.astro` - デザインサービスページ
+- `index.astro` - ホームページ（サービスの入口）
 - `dev.astro` - 開発サービスページ
-- `works.astro` - 実績一覧（カテゴリフィルタ付き）
-- `pricing.astro` - 料金ページ
-- `contact.astro` - お問い合わせページ
+- `crossword.astro` - クロスワードパズル制作ページ
 
 ファイルを直接編集して、テキストや構成を変更できます。
 
 ### 3. 実績の追加方法
-
-#### デザイン実績の追加
-
-`src/pages/design.astro` を編集して、新しい作品を追加：
-
-```astro
-<div class="work-item" id="work-your-project">
-  <div class="work-image">
-    <div class="placeholder-image">🎨</div>
-  </div>
-  <div class="work-content">
-    <h3>プロジェクト名</h3>
-    <div class="work-meta">
-      <p><strong>目的:</strong> 新規オープン告知</p>
-      <p><strong>ターゲット:</strong> 20-40代女性</p>
-      <p><strong>工夫:</strong> 温かみのある配色</p>
-      <p><strong>成果:</strong> 来店率120%向上</p>
-      <p><strong>納品形式:</strong> PDF、PNG</p>
-    </div>
-    <div class="work-tags">
-      <span class="tag">チラシデザイン</span>
-      <span class="tag">Illustrator</span>
-    </div>
-  </div>
-</div>
-```
 
 #### 開発実績の追加
 
@@ -172,10 +127,6 @@ export default defineConfig({
   </div>
 </div>
 ```
-
-#### 実績一覧ページへの追加
-
-`src/pages/works.astro` と `src/pages/index.astro` の該当箇所も更新してください。
 
 ### 4. お問い合わせフォームの設定
 

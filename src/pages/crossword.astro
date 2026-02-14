@@ -7,115 +7,161 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="オリジナルのクロスワードパズルを制作します。雑誌、イベント、教育用など、様々な用途に対応いたします。"
 >
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-tag">Crossword Puzzle</div>
-      <h1 class="hero-title">クロスワードパズル制作</h1>
-      <p class="hero-subtitle">
-        オリジナルのクロスワードパズルを制作します
-      </p>
+  <section class="bg-warning bg-gradient text-dark py-5">
+    <div class="container text-center">
+      <span class="badge bg-light text-dark mb-3">Crossword Puzzle</span>
+      <h1 class="display-4 fw-bold">クロスワードパズル制作</h1>
+      <p class="lead">オリジナルのクロスワードパズルを制作します</p>
     </div>
   </section>
 
   <!-- Service Overview -->
-  <section class="section service-overview">
+  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">こんな方におすすめ</h2>
-      <div class="target-grid">
-        <div class="target-item">
-          <div class="target-icon">📰</div>
-          <h3>雑誌・新聞社</h3>
-          <p>読者向けの定期連載コンテンツとして</p>
+      <h2 class="text-center mb-5">こんな方におすすめ</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="fs-1 mb-3">📰</div>
+              <h3 class="h5 card-title">雑誌・新聞社</h3>
+              <p class="card-text text-muted">読者向けの定期連載コンテンツとして</p>
+            </div>
+          </div>
         </div>
-        <div class="target-item">
-          <div class="target-icon">🎉</div>
-          <h3>イベント主催者</h3>
-          <p>参加者向けの景品付きクイズ企画として</p>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="fs-1 mb-3">🎉</div>
+              <h3 class="h5 card-title">イベント主催者</h3>
+              <p class="card-text text-muted">参加者向けの景品付きクイズ企画として</p>
+            </div>
+          </div>
         </div>
-        <div class="target-item">
-          <div class="target-icon">🏫</div>
-          <h3>教育機関</h3>
-          <p>学習教材や脳トレコンテンツとして</p>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="fs-1 mb-3">🏫</div>
+              <h3 class="h5 card-title">教育機関</h3>
+              <p class="card-text text-muted">学習教材や脳トレコンテンツとして</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Service Details -->
-  <section class="section service-details">
+  <section class="py-5">
     <div class="container">
-      <h2 class="section-title">サービス内容</h2>
+      <h2 class="text-center mb-5">サービス内容</h2>
       
-      <div class="details-grid">
-        <div class="detail-item">
-          <h3>🎯 カスタマイズ可能</h3>
-          <ul>
-            <li>テーマに合わせた問題作成</li>
-            <li>難易度調整（初級〜上級）</li>
-            <li>サイズ指定（5×5〜15×15マスなど）</li>
-            <li>ヒント数の調整</li>
-          </ul>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">🎯 カスタマイズ可能</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2">✓ テーマに合わせた問題作成</li>
+                <li class="mb-2">✓ 難易度調整（初級〜上級）</li>
+                <li class="mb-2">✓ サイズ指定（5×5〜15×15マスなど）</li>
+                <li class="mb-2">✓ ヒント数の調整</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="detail-item">
-          <h3>📋 対応形式</h3>
-          <ul>
-            <li>PDF（印刷用）</li>
-            <li>画像ファイル（PNG、JPEG）</li>
-            <li>Web用HTML/CSS</li>
-            <li>解答付き納品</li>
-          </ul>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">📋 対応形式</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2">✓ PDF（印刷用）</li>
+                <li class="mb-2">✓ 画像ファイル（PNG、JPEG）</li>
+                <li class="mb-2">✓ Web用HTML/CSS</li>
+                <li class="mb-2">✓ 解答付き納品</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="detail-item">
-          <h3>💡 用途例</h3>
-          <ul>
-            <li>雑誌・新聞の読者コーナー</li>
-            <li>企業イベントの景品企画</li>
-            <li>学校の教材・宿題</li>
-            <li>高齢者向け脳トレコンテンツ</li>
-          </ul>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">💡 用途例</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2">✓ 雑誌・新聞の読者コーナー</li>
+                <li class="mb-2">✓ 企業イベントの景品企画</li>
+                <li class="mb-2">✓ 学校の教材・宿題</li>
+                <li class="mb-2">✓ 高齢者向け脳トレコンテンツ</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Works -->
-  <section class="section works-section">
+  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">制作実績</h2>
+      <h2 class="text-center mb-5">制作実績</h2>
       
-      <div class="work-list">
-        <div class="work-item">
-          <h3>地域情報誌向けクロスワード</h3>
-          <div class="work-meta">
-            <p><strong>用途:</strong> 月刊誌の読者コーナー</p>
-            <p><strong>テーマ:</strong> 地域の名所・特産品</p>
-            <p><strong>サイズ:</strong> 10×10マス</p>
-            <p><strong>難易度:</strong> 中級（一般読者向け）</p>
-            <p><strong>工夫:</strong> 地域にゆかりのある言葉を中心に構成し、読者の地域愛を刺激。応募総数が前回比130%増加。</p>
+      <div class="row g-4">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h5 card-title">地域情報誌向けクロスワード</h3>
+              <div class="row text-muted small">
+                <div class="col-md-6">
+                  <p class="mb-1"><strong>用途:</strong> 月刊誌の読者コーナー</p>
+                  <p class="mb-1"><strong>テーマ:</strong> 地域の名所・特産品</p>
+                  <p class="mb-1"><strong>サイズ:</strong> 10×10マス</p>
+                  <p class="mb-1"><strong>難易度:</strong> 中級（一般読者向け）</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="mb-0"><strong>工夫:</strong> 地域にゆかりのある言葉を中心に構成し、読者の地域愛を刺激。応募総数が前回比130%増加。</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="work-item">
-          <h3>企業イベント用オリジナルパズル</h3>
-          <div class="work-meta">
-            <p><strong>用途:</strong> 周年記念イベント</p>
-            <p><strong>テーマ:</strong> 企業の歴史・製品名</p>
-            <p><strong>サイズ:</strong> 8×8マス</p>
-            <p><strong>難易度:</strong> 初級〜中級</p>
-            <p><strong>工夫:</strong> 企業理念や製品名を織り込み、ブランディングにも貢献。参加者の満足度が高評価。</p>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h5 card-title">企業イベント用オリジナルパズル</h3>
+              <div class="row text-muted small">
+                <div class="col-md-6">
+                  <p class="mb-1"><strong>用途:</strong> 周年記念イベント</p>
+                  <p class="mb-1"><strong>テーマ:</strong> 企業の歴史・製品名</p>
+                  <p class="mb-1"><strong>サイズ:</strong> 8×8マス</p>
+                  <p class="mb-1"><strong>難易度:</strong> 初級〜中級</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="mb-0"><strong>工夫:</strong> 企業理念や製品名を織り込み、ブランディングにも貢献。参加者の満足度が高評価。</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="work-item">
-          <h3>教育用英語クロスワード</h3>
-          <div class="work-meta">
-            <p><strong>用途:</strong> 中学生向け英語教材</p>
-            <p><strong>テーマ:</strong> 基本単語・文法</p>
-            <p><strong>サイズ:</strong> 7×7マス</p>
-            <p><strong>難易度:</strong> 初級</p>
-            <p><strong>工夫:</strong> 学習指導要領に沿った単語を使用。生徒の語彙学習をゲーム感覚で促進。</p>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h5 card-title">教育用英語クロスワード</h3>
+              <div class="row text-muted small">
+                <div class="col-md-6">
+                  <p class="mb-1"><strong>用途:</strong> 中学生向け英語教材</p>
+                  <p class="mb-1"><strong>テーマ:</strong> 基本単語・文法</p>
+                  <p class="mb-1"><strong>サイズ:</strong> 7×7マス</p>
+                  <p class="mb-1"><strong>難易度:</strong> 初級</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="mb-0"><strong>工夫:</strong> 学習指導要領に沿った単語を使用。生徒の語彙学習をゲーム感覚で促進。</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -123,686 +169,98 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Pricing -->
-  <section class="section pricing-section">
+  <section class="py-5">
     <div class="container">
-      <h2 class="section-title">料金・納期の目安</h2>
+      <h2 class="text-center mb-5">料金・納期の目安</h2>
       
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>基本プラン</h3>
-          <div class="price">¥12,000〜</div>
-          <ul class="pricing-features">
-            <li>5×5〜10×10マス</li>
-            <li>テーマ指定可能</li>
-            <li>PDF + 画像納品</li>
-            <li>解答付き</li>
-          </ul>
-          <p class="pricing-time">納期: 1週間〜</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">基本プラン</h3>
+              <p class="display-6 text-warning fw-bold">¥12,000〜</p>
+              <ul class="list-unstyled text-start mb-3">
+                <li class="mb-2">✓ 5×5〜10×10マス</li>
+                <li class="mb-2">✓ テーマ指定可能</li>
+                <li class="mb-2">✓ PDF + 画像納品</li>
+                <li class="mb-2">✓ 解答付き</li>
+              </ul>
+              <p class="text-muted small">納期: 1週間〜</p>
+            </div>
+          </div>
         </div>
 
-        <div class="pricing-card">
-          <h3>大型パズル</h3>
-          <div class="price">¥20,000〜</div>
-          <ul class="pricing-features">
-            <li>11×11マス以上</li>
-            <li>複雑な構成</li>
-            <li>PDF + 画像 + Web用</li>
-            <li>解答・解説付き</li>
-          </ul>
-          <p class="pricing-time">納期: 2週間〜</p>
+        <div class="col-md-4">
+          <div class="card h-100 text-center border-warning">
+            <div class="card-body">
+              <h3 class="h5 card-title">大型パズル</h3>
+              <p class="display-6 text-warning fw-bold">¥20,000〜</p>
+              <ul class="list-unstyled text-start mb-3">
+                <li class="mb-2">✓ 11×11マス以上</li>
+                <li class="mb-2">✓ 複雑な構成</li>
+                <li class="mb-2">✓ PDF + 画像 + Web用</li>
+                <li class="mb-2">✓ 解答・解説付き</li>
+              </ul>
+              <p class="text-muted small">納期: 2週間〜</p>
+            </div>
+          </div>
         </div>
 
-        <div class="pricing-card">
-          <h3>定期制作</h3>
-          <div class="price">¥45,000〜/月</div>
-          <ul class="pricing-features">
-            <li>月4本制作</li>
-            <li>優先対応</li>
-            <li>テンプレート統一</li>
-            <li>長期割引あり</li>
-          </ul>
-          <p class="pricing-time">継続契約</p>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h3 class="h5 card-title">定期制作</h3>
+              <p class="display-6 text-warning fw-bold">¥8,000〜<small class="fs-6 text-muted">/回</small></p>
+              <ul class="list-unstyled text-start mb-3">
+                <li class="mb-2">✓ 月刊連載向け</li>
+                <li class="mb-2">✓ まとめて発注で割引</li>
+                <li class="mb-2">✓ テーマの継続性確保</li>
+                <li class="mb-2">✓ 優先対応</li>
+              </ul>
+              <p class="text-muted small">月4回〜</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="additional-info">
-        <h3>制作の流れ</h3>
-        <div class="flow-steps">
-          <div class="flow-step">
-            <div class="step-number">1</div>
-            <h4>ヒアリング</h4>
-            <p>テーマ、難易度、サイズ、用途などをお伺いします</p>
+      <div class="mt-5">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="h5">制作の流れ</h4>
+            <div class="row g-3 mt-3">
+              <div class="col-md-3">
+                <div class="text-center">
+                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">1</div>
+                  <h5 class="h6">ヒアリング</h5>
+                  <p class="small text-muted">用途・テーマ・難易度などを確認</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-center">
+                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">2</div>
+                  <h5 class="h6">パズル作成</h5>
+                  <p class="small text-muted">問題・ヒントを作成</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-center">
+                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">3</div>
+                  <h5 class="h6">確認・修正</h5>
+                  <p class="small text-muted">内容を確認いただき調整</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-center">
+                  <div class="badge bg-warning text-dark rounded-circle p-3 fs-4 mb-2">4</div>
+                  <h5 class="h6">納品</h5>
+                  <p class="small text-muted">指定形式で納品</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flow-step">
-            <div class="step-number">2</div>
-            <h4>問題作成</h4>
-            <p>テーマに沿った問題を作成し、パズルを組み立てます</p>
-          </div>
-          <div class="flow-step">
-            <div class="step-number">3</div>
-            <h4>確認・調整</h4>
-            <p>ドラフト版をご確認いただき、必要に応じて調整</p>
-          </div>
-          <div class="flow-step">
-            <div class="step-number">4</div>
-            <h4>納品</h4>
-            <p>完成版と解答を指定形式で納品します</p>
-          </div>
-        </div>
-
-        <div class="notes">
-          <h4>注意事項</h4>
-          <ul>
-            <li>修正は1回まで無料。2回目以降は追加料金が発生します</li>
-            <li>専門性の高いテーマの場合、監修者の確認をお願いする場合があります</li>
-            <li>著作権は納品時にお客様に譲渡されます</li>
-            <li>急ぎの対応も可能です。お気軽にご相談ください</li>
-          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>クロスワードパズル制作サービス</h2>
-      <p>オリジナルのクロスワードパズル制作を承ります。</p>
-    </div>
-  </section>
 </BaseLayout>
-
-<style>
-  /* Hero Section - Puzzle Theme */
-  .hero {
-    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #fd79a8 100%);
-    color: #2d3436;
-    padding: 5rem 0 4rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '⊞';
-    position: absolute;
-    font-size: 25rem;
-    opacity: 0.08;
-    top: -8rem;
-    left: -5rem;
-    transform: rotate(15deg);
-    font-weight: 900;
-  }
-
-  .hero::after {
-    content: '✎';
-    position: absolute;
-    font-size: 15rem;
-    opacity: 0.08;
-    bottom: -5rem;
-    right: -3rem;
-    transform: rotate(-25deg);
-  }
-
-  .hero-tag {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 0.5rem 1.5rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: var(--spacing-sm);
-    color: #fd79a8;
-    border: 3px solid rgba(253, 121, 168, 0.3);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .hero-title {
-    font-size: 3.5rem;
-    margin-bottom: var(--spacing-sm);
-    color: #2d3436;
-    font-weight: 900;
-    text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem;
-    opacity: 0.9;
-    color: #2d3436;
-    font-weight: 600;
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Target Audience - Playful Cards */
-  .service-overview {
-    background: linear-gradient(to bottom, #fff9e6 0%, #ffe0f0 100%);
-    position: relative;
-  }
-
-  .service-overview::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: repeating-linear-gradient(
-      90deg,
-      #ffeaa7 0px,
-      #ffeaa7 20px,
-      #fab1a0 20px,
-      #fab1a0 40px,
-      #fd79a8 40px,
-      #fd79a8 60px
-    );
-  }
-
-  .target-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .target-item {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 30px rgba(253, 121, 168, 0.2);
-    text-align: center;
-    border: 4px dashed #ffeaa7;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-
-  .target-item::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #fd79a8 0%, #fab1a0 100%);
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(253, 121, 168, 0.3);
-    transform: rotate(0deg);
-    transition: transform 0.3s ease;
-  }
-
-  .target-item:hover::before {
-    transform: rotate(360deg);
-  }
-
-  .target-item:hover {
-    transform: translateY(-10px) rotate(-2deg);
-    box-shadow: 0 20px 50px rgba(253, 121, 168, 0.3);
-    border-color: #fd79a8;
-    border-style: solid;
-  }
-
-  .target-icon {
-    font-size: 4.5rem;
-    margin-bottom: var(--spacing-sm);
-    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
-    animation: bounce 2s ease-in-out infinite;
-  }
-
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .target-item h3 {
-    margin-bottom: var(--spacing-xs);
-    color: #d63031;
-    font-weight: 800;
-    font-size: 1.25rem;
-  }
-
-  .target-item p {
-    color: var(--text-gray);
-    margin-bottom: 0;
-    line-height: 1.6;
-  }
-
-  /* Service Details - Grid Pattern */
-  .service-details {
-    background: white;
-    position: relative;
-  }
-
-  .details-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .detail-item {
-    background: linear-gradient(135deg, #fff9e6 0%, #ffe0f0 100%);
-    padding: var(--spacing-lg);
-    border-radius: 1.25rem;
-    box-shadow: 0 8px 25px rgba(253, 121, 168, 0.15);
-    border: 4px solid #ffeaa7;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .detail-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(rgba(253, 121, 168, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(253, 121, 168, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
-    pointer-events: none;
-  }
-
-  .detail-item:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(253, 121, 168, 0.25);
-    border-color: #fd79a8;
-  }
-
-  .detail-item h3 {
-    margin-bottom: var(--spacing-md);
-    color: #d63031;
-    font-weight: 900;
-    font-size: 1.375rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .detail-item ul {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-    position: relative;
-    z-index: 1;
-  }
-
-  .detail-item li {
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-    padding-left: 1.75rem;
-    position: relative;
-    font-weight: 500;
-  }
-
-  .detail-item li::before {
-    content: '◆';
-    position: absolute;
-    left: 0;
-    color: #fd79a8;
-    font-size: 1rem;
-  }
-
-  /* Works - Creative Layout */
-  .works-section {
-    background: linear-gradient(to bottom, #fff9e6 0%, white 100%);
-  }
-
-  .work-list {
-    display: grid;
-    gap: var(--spacing-lg);
-  }
-
-  .work-item {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: 1.5rem;
-    box-shadow: 0 12px 35px rgba(253, 121, 168, 0.2);
-    border: 4px solid #ffe0f0;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .work-item::before {
-    content: '◆◇◆◇';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    color: #ffeaa7;
-    opacity: 0.5;
-    letter-spacing: 0.5rem;
-  }
-
-  .work-item:hover {
-    transform: translateX(15px) rotate(1deg);
-    box-shadow: 0 18px 50px rgba(253, 121, 168, 0.3);
-    border-color: #fd79a8;
-  }
-
-  .work-item h3 {
-    margin-bottom: var(--spacing-md);
-    color: #d63031;
-    font-weight: 900;
-    font-size: 1.5rem;
-    border-bottom: 4px dotted #ffeaa7;
-    padding-bottom: var(--spacing-sm);
-  }
-
-  .work-meta p {
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-dark);
-    line-height: 1.7;
-    padding-left: 1rem;
-    border-left: 3px solid #fab1a0;
-  }
-
-  .work-meta strong {
-    color: #d63031;
-    font-weight: 800;
-    background: linear-gradient(to right, #fff9e6, transparent);
-    padding: 0.1rem 0.4rem;
-    border-radius: 0.25rem;
-  }
-
-  /* Pricing - Puzzle Piece Style */
-  .pricing-section {
-    background: white;
-  }
-
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .pricing-card {
-    background: linear-gradient(135deg, #fff9e6 0%, #ffe0f0 100%);
-    padding: var(--spacing-xl);
-    border-radius: 2rem;
-    box-shadow: 0 15px 45px rgba(253, 121, 168, 0.2);
-    text-align: center;
-    border: 5px solid #ffeaa7;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pricing-card::before {
-    content: '⊞';
-    position: absolute;
-    font-size: 15rem;
-    opacity: 0.05;
-    top: -5rem;
-    right: -3rem;
-    transform: rotate(25deg);
-    font-weight: 900;
-  }
-
-  .pricing-card:hover {
-    transform: translateY(-15px) rotate(-3deg);
-    box-shadow: 0 25px 70px rgba(253, 121, 168, 0.35);
-    border-color: #fd79a8;
-  }
-
-  .pricing-card h3 {
-    margin-bottom: var(--spacing-md);
-    color: #d63031;
-    font-weight: 900;
-    font-size: 1.625rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .price {
-    font-size: 2.75rem;
-    font-weight: 900;
-    color: #fd79a8;
-    margin-bottom: var(--spacing-md);
-    text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.8);
-    position: relative;
-    z-index: 1;
-  }
-
-  .pricing-features {
-    list-style: none;
-    padding: 0;
-    margin-bottom: var(--spacing-md);
-    text-align: left;
-    position: relative;
-    z-index: 1;
-  }
-
-  .pricing-features li {
-    padding: var(--spacing-sm) 0;
-    color: var(--text-dark);
-    position: relative;
-    padding-left: 2rem;
-    font-weight: 600;
-  }
-
-  .pricing-features li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #fd79a8;
-    font-weight: bold;
-    font-size: 1.75rem;
-  }
-
-  .pricing-time {
-    color: white;
-    font-size: 0.95rem;
-    margin-bottom: 0;
-    background: linear-gradient(135deg, #fd79a8 0%, #fab1a0 100%);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 2rem;
-    font-weight: 700;
-    box-shadow: 0 6px 20px rgba(253, 121, 168, 0.4);
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Additional Info - Flow & Notes */
-  .additional-info {
-    margin-top: var(--spacing-xl);
-  }
-
-  .additional-info h3 {
-    margin-bottom: var(--spacing-lg);
-    color: #d63031;
-    font-size: 2rem;
-    font-weight: 900;
-    text-align: center;
-    text-shadow: 2px 2px 0px rgba(255, 234, 167, 0.5);
-  }
-
-  .flow-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .flow-step {
-    text-align: center;
-    padding: var(--spacing-lg);
-    background: white;
-    border-radius: 1.5rem;
-    box-shadow: 0 10px 30px rgba(253, 121, 168, 0.2);
-    border: 4px solid #ffeaa7;
-    transition: all 0.3s ease;
-  }
-
-  .flow-step:hover {
-    transform: translateY(-8px) rotate(-2deg);
-    box-shadow: 0 18px 45px rgba(253, 121, 168, 0.3);
-    border-color: #fd79a8;
-  }
-
-  .step-number {
-    width: 4.5rem;
-    height: 4.5rem;
-    background: linear-gradient(135deg, #fd79a8 0%, #fab1a0 100%);
-    color: white;
-    border-radius: 1rem; /* Rounded square for puzzle piece aesthetic */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.25rem;
-    font-weight: 900;
-    margin: 0 auto var(--spacing-md);
-    box-shadow: 0 8px 25px rgba(253, 121, 168, 0.4);
-    border: 4px solid white;
-    transform: rotate(5deg); /* Slight rotation for playful puzzle theme */
-  }
-
-  .flow-step h4 {
-    margin-bottom: var(--spacing-sm);
-    color: #d63031;
-    font-weight: 800;
-    font-size: 1.125rem;
-  }
-
-  .flow-step p {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-    margin-bottom: 0;
-    line-height: 1.7;
-  }
-
-  .notes {
-    background: linear-gradient(135deg, #fff9e6 0%, #ffe0f0 100%);
-    padding: var(--spacing-lg);
-    border-radius: 1.5rem;
-    border: 4px dashed #fd79a8;
-    box-shadow: 0 10px 30px rgba(253, 121, 168, 0.2);
-    position: relative;
-  }
-
-  .notes::before {
-    content: '📝';
-    position: absolute;
-    top: -25px;
-    left: 30px;
-    font-size: 3rem;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
-  }
-
-  .notes h4 {
-    margin-bottom: var(--spacing-md);
-    color: #d63031;
-    font-weight: 900;
-    font-size: 1.375rem;
-  }
-
-  .notes ul {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-  }
-
-  .notes li {
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-    padding-left: 1.75rem;
-    position: relative;
-    font-weight: 600;
-  }
-
-  .notes li::before {
-    content: '◆';
-    position: absolute;
-    left: 0;
-    color: #fd79a8;
-    font-size: 1.125rem;
-  }
-
-  /* CTA Section - Playful Puzzle Theme */
-  .cta-section {
-    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #fd79a8 100%);
-    color: #2d3436;
-    text-align: center;
-    padding: 5rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-section::before {
-    content: '◆◇◆◇◆◇';
-    position: absolute;
-    font-size: 8rem;
-    opacity: 0.1;
-    top: -2rem;
-    left: -1rem;
-    letter-spacing: 1rem;
-    transform: rotate(-15deg);
-  }
-
-  .cta-section::after {
-    content: '✎✎✎';
-    position: absolute;
-    font-size: 10rem;
-    opacity: 0.1;
-    bottom: -3rem;
-    right: -2rem;
-    letter-spacing: 1rem;
-    transform: rotate(20deg);
-  }
-
-  .cta-section h2 {
-    margin-bottom: var(--spacing-sm);
-    color: #2d3436;
-    font-size: 2.75rem;
-    font-weight: 900;
-    text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.6);
-    position: relative;
-    z-index: 1;
-  }
-
-  .cta-section p {
-    font-size: 1.375rem;
-    margin-bottom: var(--spacing-md);
-    color: #2d3436;
-    font-weight: 600;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2.25rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.125rem;
-    }
-
-    .hero::before {
-      font-size: 12rem;
-    }
-
-    .hero::after {
-      font-size: 8rem;
-    }
-
-    .target-grid,
-    .details-grid,
-    .pricing-grid,
-    .flow-steps {
-      grid-template-columns: 1fr;
-    }
-
-    .target-icon {
-      font-size: 3.5rem;
-    }
-  }
-</style>
