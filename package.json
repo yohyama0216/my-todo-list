@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yohyama0216/my-todo-list.git"
+    "url": "git+https://github.com/yohyama0216/my-portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/yohyama0216/my-todo-list/issues"
+    "url": "https://github.com/yohyama0216/my-portfolio/issues"
   },
-  "homepage": "https://github.com/yohyama0216/my-todo-list#readme",
+  "homepage": "https://github.com/yohyama0216/my-portfolio#readme",
   "devDependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.17.2"

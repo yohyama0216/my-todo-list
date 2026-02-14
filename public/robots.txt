@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # 重要: サイトマップのURLを実際のデプロイURLに置き換えてください
-Sitemap: https://yohyama0216.github.io/my-todo-list/sitemap-index.xml
+Sitemap: https://yohyama0216.github.io/my-portfolio/sitemap-index.xml

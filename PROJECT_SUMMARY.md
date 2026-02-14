@@ -176,7 +176,7 @@ npm run preview # ビルド結果のプレビュー
 
 ### ディレクトリ構造
 ```
-my-todo-list/
+my-portfolio/
 ├── src/
 │   ├── components/      # 再利用可能なコンポーネント
 │   ├── layouts/         # ページレイアウト
