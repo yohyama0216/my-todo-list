@@ -71,20 +71,18 @@ npm run preview
 # ブラウザで http://localhost:4321 を開いて確認
 ```
 
-### 2. Formspreeの設定
+### 2. メールアドレスの設定
+
+1. `src/pages/crossword.astro` を開く
+2. `contact@example.com` を実際のメールアドレスに置き換え
+3. 変更をコミット・プッシュ
+
+**Formspreeを使う場合（オプション、推奨）**:
 
 1. [Formspree](https://formspree.io/)にログイン
 2. 新しいフォームを作成
 3. フォームIDをコピー
-4. `src/pages/contact.astro` の以下の部分を更新：
-
-```html
-<form 
-  action="https://formspree.io/f/あなたのフォームID" 
-  method="POST"
->
-```
-
+4. `src/pages/crossword.astro` のメールリンクをフォームに置き換え
 5. 変更をコミット・プッシュ
 
 ### 3. GitHub Pagesの設定確認

@@ -130,23 +130,26 @@ export default defineConfig({
 
 ### 4. お問い合わせフォームの設定
 
+現在、お問い合わせは各ページ内でメールリンクとして実装されています。
+
 **Formspreeを使う場合（推奨）**:
 
 1. [Formspree](https://formspree.io/)にアカウント作成
 2. 新しいフォームを作成してフォームIDを取得
-3. `src/pages/contact.astro` の以下の部分を変更：
+3. `src/pages/crossword.astro` のメールリンクをフォームに置き換え：
 
 ```html
 <form 
   action="https://formspree.io/f/あなたのフォームID" 
   method="POST"
 >
+  <!-- フォームフィールドを追加 -->
+</form>
 ```
 
-**Google Formsを使う場合**:
+**メールアドレスの変更**:
 
-Google Formsで作成したフォームの埋め込みコードを使用するか、
-フォームURLへのリンクに変更します。
+`src/pages/crossword.astro` 内の `contact@example.com` を実際のメールアドレスに変更します。
 
 ### 5. デザインのカスタマイズ
 
