@@ -1,0 +1,93 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">英語学習用クロスワード（サンプル）</text>
+  
+  <!-- Grid (7x7) -->
+  <g transform="translate(80, 60)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="35" y="0" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="70" y="0" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="105" y="0" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="140" y="0" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="175" y="0" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="210" y="0" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="35" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="35" y="35" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="70" y="35" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="105" y="35" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="140" y="35" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="175" y="35" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="210" y="35" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    
+    <!-- Row 3 -->
+    <rect x="0" y="70" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="35" y="70" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="70" y="70" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="105" y="70" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="140" y="70" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="175" y="70" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="210" y="70" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    
+    <!-- Row 4 -->
+    <rect x="0" y="105" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="35" y="105" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="70" y="105" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="105" y="105" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="140" y="105" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="175" y="105" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="210" y="105" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    
+    <!-- Row 5 -->
+    <rect x="0" y="140" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="35" y="140" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="70" y="140" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="105" y="140" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="140" y="140" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="175" y="140" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="210" y="140" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    
+    <!-- Row 6 -->
+    <rect x="0" y="175" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="35" y="175" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="70" y="175" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="105" y="175" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="140" y="175" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="175" y="175" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="210" y="175" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    
+    <!-- Row 7 -->
+    <rect x="0" y="210" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="35" y="210" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="70" y="210" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="105" y="210" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="140" y="210" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    <rect x="175" y="210" width="35" height="35" fill="#333" stroke="#333" stroke-width="1"/>
+    <rect x="210" y="210" width="35" height="35" fill="white" stroke="#333" stroke-width="1"/>
+    
+    <!-- Numbers -->
+    <text x="5" y="20" font-family="Arial, sans-serif" font-size="10" fill="#333">1</text>
+    <text x="110" y="20" font-family="Arial, sans-serif" font-size="10" fill="#333">2</text>
+    <text x="40" y="55" font-family="Arial, sans-serif" font-size="10" fill="#333">3</text>
+    <text x="5" y="90" font-family="Arial, sans-serif" font-size="10" fill="#333">4</text>
+    <text x="5" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333">5</text>
+    <text x="40" y="195" font-family="Arial, sans-serif" font-size="10" fill="#333">6</text>
+    <text x="5" y="230" font-family="Arial, sans-serif" font-size="10" fill="#333">7</text>
+  </g>
+  
+  <!-- Clues -->
+  <text x="20" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">ACROSS (ヨコ):</text>
+  <text x="20" y="345" font-family="Arial, sans-serif" font-size="10" fill="#555">1. Color of the sky (空の色)</text>
+  <text x="20" y="360" font-family="Arial, sans-serif" font-size="10" fill="#555">4. Opposite of hot (熱いの反対)</text>
+  
+  <text x="220" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">DOWN (タテ):</text>
+  <text x="220" y="345" font-family="Arial, sans-serif" font-size="10" fill="#555">1. Large body of water (大きな水域)</text>
+  <text x="220" y="360" font-family="Arial, sans-serif" font-size="10" fill="#555">2. Animal that meows (ニャーと鳴く動物)</text>
+  
+  <text x="150" y="385" font-family="Arial, sans-serif" font-size="10" font-style="italic" fill="#888" text-anchor="middle">※中学1年生レベル</text>
+</svg>
